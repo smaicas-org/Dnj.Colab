@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E4A2AB78-2E57-454F-9D0E-505B15A3F551}"
+	ProjectSection(SolutionItems) = preProject
+		README-Sample.md = README-Sample.md
+		ThisRepository.html = ThisRepository.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{9B329E77-1DFE-4B09-9F6D-6F5A262DC33F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Training", "Training", "{3FB19F34-69B1-469F-BC97-016D26C03B13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{4D84F1CA-4766-4A5B-BD35-711384E60516}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Assets\thisrepository.js = Documentation\Assets\thisrepository.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApps", "ConsoleApps", "{D405CEAE-CFA0-45A5-B688-A84A68B042C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorApps", "BlazorApps", "{2E0F193F-2567-4BE1-BC88-A89DA03DB239}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MauiApps", "MauiApps", "{1B2DA651-42AF-445D-B7EA-812D93FCC239}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level1", "Level1", "{FBE83585-3BF3-4CEE-AC84-FD6FF1216874}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level2", "Level2", "{B86F6C62-A5B9-45D7-A3E2-6435163408BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{1706C748-9B99-4437-9314-4248989A370A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.BlazorApps.MvvmSample", "Samples\MVVM\Dnj.Colab.Samples.BlazorApps.MvvmSample\Dnj.Colab.Samples.BlazorApps.MvvmSample.csproj", "{90215206-3161-4F67-AE9A-E844466312EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90215206-3161-4F67-AE9A-E844466312EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90215206-3161-4F67-AE9A-E844466312EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90215206-3161-4F67-AE9A-E844466312EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90215206-3161-4F67-AE9A-E844466312EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D84F1CA-4766-4A5B-BD35-711384E60516} = {E4A2AB78-2E57-454F-9D0E-505B15A3F551}
+		{D405CEAE-CFA0-45A5-B688-A84A68B042C1} = {9B329E77-1DFE-4B09-9F6D-6F5A262DC33F}
+		{2E0F193F-2567-4BE1-BC88-A89DA03DB239} = {9B329E77-1DFE-4B09-9F6D-6F5A262DC33F}
+		{1B2DA651-42AF-445D-B7EA-812D93FCC239} = {9B329E77-1DFE-4B09-9F6D-6F5A262DC33F}
+		{FBE83585-3BF3-4CEE-AC84-FD6FF1216874} = {3FB19F34-69B1-469F-BC97-016D26C03B13}
+		{B86F6C62-A5B9-45D7-A3E2-6435163408BD} = {3FB19F34-69B1-469F-BC97-016D26C03B13}
+		{1706C748-9B99-4437-9314-4248989A370A} = {3FB19F34-69B1-469F-BC97-016D26C03B13}
+		{90215206-3161-4F67-AE9A-E844466312EE} = {2E0F193F-2567-4BE1-BC88-A89DA03DB239}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C506D04A-CFD5-4922-B91B-4BE35FA817F7}
+	EndGlobalSection
+EndGlobal
