@@ -5,6 +5,11 @@ Este repositorio pretende ser un punto de encuentro para programadores de todos 
 La idea es no solo aprender a programar si no aprender integración de código, conocer y adoptar una manera de trabajar profesional. 
 Adecuada a la manera que se trabaja en una empresa. Es un repositorio de codigo abierto y cualquier persona está invitada a colaborar.
 
+No hay restricción de lenguajes o frameworks.
+Si deseas aportar código de otros lenguajes o frameworks que no se encuentran actualmente
+categorizados en el repositorio adelante. 
+En ese caso sería interesante que tú mismo fueras el responsable de la revisión de código para
+esas categorías. Ponte en contacto para gestionar los permisos (https://discord.gg/rPF39zRWQp)
 * * *
 
 Contenido

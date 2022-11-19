@@ -1,9 +1,37 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Simple Todo Manager</PageTitle>
 
-<h1>Hello, world!</h1>
+@inherits ComponentBase
+@inject IDnjTodoViewModel ViewModel
+@using System.ComponentModel;
+@using Dnj.Colab.Samples.BlazorApps.MvvmSample.ViewModels
+@implements IDisposable
 
-Welcome to your new app.
+<h1>Items to do: @ViewModel.TodoItems</h1>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<CascadingValue Value=@ViewModel Name="ViewModel">
+    <TodoListComponent />
+    <TodoFormComponent />
+</CascadingValue>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        ViewModel.PropertyChanged += OnPropertyChangedHandler;
+
+        await base.OnInitializedAsync();
+    }
+
+    async void OnPropertyChangedHandler(object? sender, PropertyChangedEventArgs e)
+    {
+        await InvokeAsync(StateHasChanged).ConfigureAwait(false);
+    }
+
+    public void Dispose()
+    {
+        ViewModel.PropertyChanged -= OnPropertyChangedHandler;
+    }
+
+}
