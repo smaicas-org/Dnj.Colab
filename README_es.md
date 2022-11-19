@@ -1,4 +1,4 @@
-Introducci�n
+Introducción
 ============
 
 Este repositorio pretende ser un punto de encuentro para programadores de todos los niveles. La idea es no solo aprender a programar si no aprender integraci�n de c�digo, conocer y adoptar una manera de trabajar profesional. Adecuada a la manera que se trabaja en una empresa. Es un repositorio de codigo abierto y cualquier persona est� invitada a colaborar.
@@ -10,7 +10,7 @@ Contenido
 
 * * *
 
-�Como colaborar?
+Como colaborar?
 ================
 
 ### Descargar repositorio
@@ -36,7 +36,7 @@ Contenido
 
 * * *
 
-Documentaci�n externa
+Documentación externa
 =====================
 
 [C# Referencia del lenguaje](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/)

@@ -8,7 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		README-Sample.md = README-Sample.md
 		README.md = README.md
 		README_en.md = README_en.md
-		ThisRepository.html = ThisRepository.html
 		README_es.md = README_es.md
 	EndProjectSection
 EndProject
@@ -18,7 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Training", "Training", "{3F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{4D84F1CA-4766-4A5B-BD35-711384E60516}"
 	ProjectSection(SolutionItems) = preProject
-		Documentation\Assets\thisrepository.js = Documentation\Assets\thisrepository.js
+		Documentation\Assets\vs_clone_1.png = Documentation\Assets\vs_clone_1.png
+		Documentation\Assets\vs_clone_2.png = Documentation\Assets\vs_clone_2.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApps", "ConsoleApps", "{D405CEAE-CFA0-45A5-B688-A84A68B042C1}"
