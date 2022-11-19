@@ -1,6 +1,8 @@
 Introduction
 ============
 
+Contenido duplicado
+
 Introducción
 ============
 
