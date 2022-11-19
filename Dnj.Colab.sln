@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level2", "Level2", "{B86F6C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{1706C748-9B99-4437-9314-4248989A370A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.MvvmSample", "Samples\MVVM\Dnj.Colab.Samples.BlazorApps.MvvmSample\Dnj.Colab.Samples.BlazorApps.MvvmSample.csproj", "{90215206-3161-4F67-AE9A-E844466312EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.MvvmSample", "Samples\DOTNET\MVVM\Dnj.Colab.Samples.BlazorApps.MvvmSample\Dnj.Colab.Samples.BlazorApps.MvvmSample.csproj", "{90215206-3161-4F67-AE9A-E844466312EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVVM", "MVVM", "{F8502020-EA92-4174-991D-DBFE5C213C30}"
 EndProject
