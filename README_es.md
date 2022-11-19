@@ -1,12 +1,12 @@
 Introduction
 ============
 
-Introducción
+IntroducciÃ³n
 ============
 
 This repository aims to be a meeting point for programmers of all levels. The idea is not only to learn to program but also to learn code integration, to know and adopt a professional way of working. Appropriate to the way you work in a company. It is an open source repository and anyone is invited to contribute.
 
-Este repositorio pretende ser un punto de encuentro para programadores de todos los niveles. La idea es no solo aprender a programar si no aprender integración de código, conocer y adoptar una manera de trabajar profesional. Adecuada a la manera que se trabaja en una empresa. Es un repositorio de codigo abierto y cualquier persona está invitada a colaborar.
+Este repositorio pretende ser un punto de encuentro para programadores de todos los niveles. La idea es no solo aprender a programar si no aprender integraciÃ³n de cÃ³digo, conocer y adoptar una manera de trabajar profesional. Adecuada a la manera que se trabaja en una empresa. Es un repositorio de codigo abierto y cualquier persona estÃ¡ invitada a colaborar.
 
 * * *
 
@@ -21,7 +21,7 @@ Contenido
 How to collaborate?
 ===================
 
-¿Como colaborar?
+Â¿Como colaborar?
 ================
 
 ### Download repository
@@ -58,14 +58,14 @@ How to collaborate?
 *   Copy and fill the `README-Sample.md` located in Documentation folder. Rename it to `README.md` and put it in the root of your project
 
 *   Crea el proyecto en la carpeta de soluciones de acuerdo al tipo de proyecto que implementes.
-*   Copie y complete el `README-Sample.md` ubicado en la carpeta Documentación. Cámbiele el nombre a `README.md` y ponlo en la raíz de su proyecto.
+*   Copie y complete el `README-Sample.md` ubicado en la carpeta DocumentaciÃ³n. CÃ¡mbiele el nombre a `README.md` y ponlo en la raÃ­z de su proyecto.
 
 * * *
 
 External Docs
 =============
 
-Documentación externa
+DocumentaciÃ³n externa
 =====================
 
 [C# Language Reference](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/)
@@ -74,14 +74,14 @@ Documentación externa
 
 [.NET Documentation](https://learn.microsoft.com/en-us/dotnet/)
 
-[.NET Documentación](https://learn.microsoft.com/en-us/dotnet/)
+[.NET DocumentaciÃ³n](https://learn.microsoft.com/en-us/dotnet/)
 
 [Blazor Documentation](https://learn.microsoft.com/es-es/aspnet/core/blazor/?view=aspnetcore-7.0)
 
-[Blazor Documentación](https://learn.microsoft.com/es-es/aspnet/core/blazor/?view=aspnetcore-7.0)
+[Blazor DocumentaciÃ³n](https://learn.microsoft.com/es-es/aspnet/core/blazor/?view=aspnetcore-7.0)
 
 [MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-7.0)
 
-[MAUI Documentación](https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-7.0)
+[MAUI DocumentaciÃ³n](https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-7.0)
 
 * * *
