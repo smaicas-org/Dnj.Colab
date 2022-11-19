@@ -2,7 +2,7 @@ Introducción
 ============
 
 Este repositorio pretende ser un punto de encuentro para programadores de todos los niveles. 
-La idea es no solo aprender a programar si no aprender integraci�n de código, conocer y adoptar una manera de trabajar profesional. 
+La idea es no solo aprender a programar si no aprender integración de código, conocer y adoptar una manera de trabajar profesional. 
 Adecuada a la manera que se trabaja en una empresa. Es un repositorio de codigo abierto y cualquier persona está invitada a colaborar.
 
 * * *
@@ -18,6 +18,7 @@ Como colaborar?
 1 - Crea una cuenta de github
 
 2 - Dirigete a la [página del repositorio](https://github.com/smaicas-org/Dnj.Colab) y pulsa "Create a new Fork"
+
 ![](Documentation/Assets/fork_1.png)
 ![](Documentation/Assets/fork_2.png)
 Esto creara una copia del repositorio original en tu cuenta.
@@ -31,6 +32,7 @@ REPOSITORY URL debe seguir el formato  https://USERNAME@github.com/source/path.g
 git clone {REPOSITORY URL}
 ```
 - Usando VS:
+
 ![](Documentation/Assets/vs_clone_1.png)
 ![](Documentation/Assets/vs_clone_2.png)
 
@@ -47,6 +49,7 @@ git checkout dev
 git switch -c "feature/mybranchname"
 ```
 - Usando VS:
+
 ![](Documentation/Assets/vs_newbranch_1.png)
 ![](Documentation/Assets/vs_newbranch_2.png)
 
@@ -64,6 +67,7 @@ git push origin "feature/mybranchname"
 _Se abrirá una ventana para acceder con tu usuario_ 
     
 7 - Ve a Github e inicia una 'Pull Request'
+
 ![](Documentation/Assets/pullrequest_1.png)
 ![](Documentation/Assets/pullrequest_2.png)
 ![](Documentation/Assets/pullrequest_3.png)

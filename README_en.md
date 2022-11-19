@@ -22,6 +22,7 @@ How to collaborate?
 1 - Create a GitHub account
 
 2 - Go to [repository page](https://github.com/smaicas-org/Dnj.Colab) and "Create a new Fork"
+
 ![](Documentation/Assets/fork_1.png)
 ![](Documentation/Assets/fork_2.png)
 It will create a copy of the original repository in your account.
@@ -35,6 +36,7 @@ REPOSITORY URL must have the format  https://USERNAME@github.com/source/path.git
 git clone {REPOSITORY URL}
 ```
 - Using Visual Studio:
+
 ![](Documentation/Assets/vs_clone_1.png)
 ![](Documentation/Assets/vs_clone_2.png)
 
@@ -51,6 +53,7 @@ git checkout dev
 git switch -c "feature/mybranchname"
 ```
 - Using Visual Studio:
+
 ![](Documentation/Assets/vs_newbranch_1.png)
 ![](Documentation/Assets/vs_newbranch_2.png)
 
@@ -68,6 +71,7 @@ git push origin "feature/mybranchname"
 _It will prompt for login_ 
     
 7 - Go to github and initiate a pull request
+
 ![](Documentation/Assets/pullrequest_1.png)
 ![](Documentation/Assets/pullrequest_2.png)
 ![](Documentation/Assets/pullrequest_3.png)
