@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Resources\MarkovChainRes.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -14,7 +18,11 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
+		<InternalsVisibleTo Include="Dnj.Colab.Samples.BlazorApps.Markov.Test" />
+	</ItemGroup>
+  
+	<ItemGroup>
     <EmbeddedResource Update="Resources\MarkovChainRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MarkovChainRes.Designer.cs</LastGenOutput>
