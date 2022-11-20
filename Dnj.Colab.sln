@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E4A2AB78-2E57-454F-9D0E-505B15A3F551}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
-		Documentation\README-Sample.md = Documentation\README-Sample.md
+		Documentation\README-To_Fill.md = Documentation\README-To_Fill.md
 		README.md = README.md
 		Documentation\README_en.md = Documentation\README_en.md
 		Documentation\README_es.md = Documentation\README_es.md
@@ -58,9 +58,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{26096D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Partials", "Partials", "{A5A0BB90-3C59-4F14-A3A0-060E99CF617F}"
 	ProjectSection(SolutionItems) = preProject
-		Documentation\Partials\README_code_guidelines_en.md = Documentation\Partials\README_code_guidelines_en.md
-		Documentation\Partials\README_code_guidelines_es.md = Documentation\Partials\README_code_guidelines_es.md
 		Documentation\Partials\README_deliver_code_en.md = Documentation\Partials\README_deliver_code_en.md
+		Documentation\Partials\README_code_guidelines_es.md = Documentation\Partials\README_code_guidelines_es.md
+		Documentation\Partials\README_code_guidelines_en.md = Documentation\Partials\README_code_guidelines_en.md
 		Documentation\Partials\README_deliver_code_es.md = Documentation\Partials\README_deliver_code_es.md
 	EndProjectSection
 EndProject

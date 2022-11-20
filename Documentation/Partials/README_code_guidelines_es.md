@@ -1,11 +1,7 @@
-## Creating project
+## Creando el proyecto
 
-*   Create the project in the solutions folder according to the type of project you are deploying.
-*   If you think a section for the code you implement does not exists already you can create the new folder
-*   following a coherent structure.
+* Cree el proyecto en la carpeta de soluciones según el tipo de proyecto que esté implementando.
+* Si cree que una sección para el código que implementa aún no existe, puede crear la nueva carpeta
+     siguiendo una estructura coherente.
 
-### For Samples Section:
-*   Copy and fill the `README-Sample.md` located in Documentation folder. Rename it to `README.md` and put it in the root of your project.
-
-### For Training Section:
-*   Copy and fill the `README-Training.md` located in Documentation folder. Rename it to `README.md` and put it in the root of your project.
+*   Copie y complete el `README-Sample.md` ubicado en la carpeta Documentación. Cámbiele el nombre a `README.md` y colóquelo en la raíz de su proyecto.

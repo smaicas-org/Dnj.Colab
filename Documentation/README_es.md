@@ -13,7 +13,7 @@ esas categorías. Ponte en contacto para gestionar los permisos (https://discord
 * * *
 
 
-Content
+Contenido
 =======
 **NO hay restricción para crear nuevas secciones ni para usar otros lenguajes**
 
