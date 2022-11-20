@@ -5,11 +5,11 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E4A2AB78-2E57-454F-9D0E-505B15A3F551}"
 	ProjectSection(SolutionItems) = preProject
-		LICENSE.txt = LICENSE.txt
-		README-Sample.md = README-Sample.md
+		LICENSE = LICENSE
+		Documentation\README-Sample.md = Documentation\README-Sample.md
 		README.md = README.md
-		README_en.md = README_en.md
-		README_es.md = README_es.md
+		Documentation\README_en.md = Documentation\README_en.md
+		Documentation\README_es.md = Documentation\README_es.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{9B329E77-1DFE-4B09-9F6D-6F5A262DC33F}"
@@ -18,8 +18,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Training", "Training", "{3F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{4D84F1CA-4766-4A5B-BD35-711384E60516}"
 	ProjectSection(SolutionItems) = preProject
+		Documentation\Assets\fork_1.png = Documentation\Assets\fork_1.png
+		Documentation\Assets\fork_2.png = Documentation\Assets\fork_2.png
+		Documentation\Assets\fork_3.png = Documentation\Assets\fork_3.png
+		Documentation\Assets\pullrequest_1.png = Documentation\Assets\pullrequest_1.png
+		Documentation\Assets\pullrequest_2.png = Documentation\Assets\pullrequest_2.png
+		Documentation\Assets\pullrequest_3.png = Documentation\Assets\pullrequest_3.png
 		Documentation\Assets\vs_clone_1.png = Documentation\Assets\vs_clone_1.png
 		Documentation\Assets\vs_clone_2.png = Documentation\Assets\vs_clone_2.png
+		Documentation\Assets\vs_newbranch_1.png = Documentation\Assets\vs_newbranch_1.png
+		Documentation\Assets\vs_newbranch_2.png = Documentation\Assets\vs_newbranch_2.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApps", "ConsoleApps", "{D405CEAE-CFA0-45A5-B688-A84A68B042C1}"
@@ -47,6 +55,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level2", "Level2", "{B119254D-C6B3-43E2-8963-F05D97549CD7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{26096D16-510C-4E06-B283-78B75BD7C82C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Partials", "Partials", "{A5A0BB90-3C59-4F14-A3A0-060E99CF617F}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Partials\README_code_guidelines_en.md = Documentation\Partials\README_code_guidelines_en.md
+		Documentation\Partials\README_code_guidelines_es.md = Documentation\Partials\README_code_guidelines_es.md
+		Documentation\Partials\README_deliver_code_en.md = Documentation\Partials\README_deliver_code_en.md
+		Documentation\Partials\README_deliver_code_es.md = Documentation\Partials\README_deliver_code_es.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +93,7 @@ Global
 		{C53C2A35-1E39-49F8-ADBE-5C4481F1AFAA} = {2A4D874B-5109-475E-BD9E-895B4385172E}
 		{B119254D-C6B3-43E2-8963-F05D97549CD7} = {2A4D874B-5109-475E-BD9E-895B4385172E}
 		{26096D16-510C-4E06-B283-78B75BD7C82C} = {2A4D874B-5109-475E-BD9E-895B4385172E}
+		{A5A0BB90-3C59-4F14-A3A0-060E99CF617F} = {E4A2AB78-2E57-454F-9D0E-505B15A3F551}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C506D04A-CFD5-4922-B91B-4BE35FA817F7}

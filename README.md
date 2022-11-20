@@ -1,5 +1,9 @@
 ## Dnj.Colab
 
-[English Documentation](./README_en.md)
+****
 
-[Documentación en Español](./README_es.md)
+[English Documentation](Documentation/README_en.md)
+
+[Documentación en Español](Documentation/README_es.md)
+
+****
