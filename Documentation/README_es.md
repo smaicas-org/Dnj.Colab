@@ -2,7 +2,7 @@ Introducción
 ============
 
 Este repositorio pretende ser un punto de encuentro para programadores de todos los niveles. 
-La idea es no solo aprender a programar si no aprender integración de código, conocer y adoptar una manera de trabajar profesional. 
+La idea es no solo mejorar o aprender programación si no aprender integración de código, conocer y adoptar una manera de trabajar profesional. 
 Adecuada a la manera que se trabaja en una empresa. Es un repositorio de codigo abierto y cualquier persona está invitada a colaborar.
 
 No hay restricción de lenguajes o frameworks.

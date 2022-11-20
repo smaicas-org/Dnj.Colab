@@ -2,7 +2,7 @@ Introduction
 ============
 
 This repository aims to be a meeting point for programmers of all levels. 
-The idea is not only to learn to program but also to learn code integration, to know and adopt a professional way of working. 
+The idea is not only to improve or learn programming but also to learn code integration, to know and adopt a professional way of working. 
 Appropriate to the way you work in a company. It is an open source repository and anyone is invited to contribute.
 
 There is no restriction of languages or frameworks.
