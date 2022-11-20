@@ -1,0 +1,1 @@
+Get-ChildItem -Path "." -Include "bin", "obj" -Recurse | % { Remove-Item $_.Fullname -Recurse -Force -Confirm:$false }
