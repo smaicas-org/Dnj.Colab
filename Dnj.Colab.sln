@@ -58,17 +58,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{26096D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Partials", "Partials", "{A5A0BB90-3C59-4F14-A3A0-060E99CF617F}"
 	ProjectSection(SolutionItems) = preProject
-		Documentation\Partials\README_deliver_code_en.md = Documentation\Partials\README_deliver_code_en.md
-		Documentation\Partials\README_code_guidelines_es.md = Documentation\Partials\README_code_guidelines_es.md
 		Documentation\Partials\README_code_guidelines_en.md = Documentation\Partials\README_code_guidelines_en.md
+		Documentation\Partials\README_code_guidelines_es.md = Documentation\Partials\README_code_guidelines_es.md
+		Documentation\Partials\README_deliver_code_en.md = Documentation\Partials\README_deliver_code_en.md
 		Documentation\Partials\README_deliver_code_es.md = Documentation\Partials\README_deliver_code_es.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.BlazorApps.Markov", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.BlazorApps.Markov\Dnj.Colab.Samples.BlazorApps.Markov.csproj", "{C3173679-45A6-4F42-9B3A-03656CE22A01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.Markov", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.BlazorApps.Markov\Dnj.Colab.Samples.BlazorApps.Markov.csproj", "{C3173679-45A6-4F42-9B3A-03656CE22A01}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MARKOV", "MARKOV", "{F859E3A9-29AD-4261-B193-880BAF913251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.BlazorApps.Markov.Test", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.BlazorApps.Markov.Test\Dnj.Colab.Samples.BlazorApps.Markov.Test.csproj", "{35FED9A9-C3C7-4F85-937B-4899E3733D35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.Markov.Test", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.BlazorApps.Markov.Test\Dnj.Colab.Samples.BlazorApps.Markov.Test.csproj", "{35FED9A9-C3C7-4F85-937B-4899E3733D35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JSINTEROP", "JSINTEROP", "{A3C22753-DCF5-4106-AE92-94F4470960F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.BlazorApps.SimpleJSInterop", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.csproj", "{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL.csproj", "{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +94,14 @@ Global
 		{35FED9A9-C3C7-4F85-937B-4899E3733D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35FED9A9-C3C7-4F85-937B-4899E3733D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35FED9A9-C3C7-4F85-937B-4899E3733D35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +125,9 @@ Global
 		{C3173679-45A6-4F42-9B3A-03656CE22A01} = {F859E3A9-29AD-4261-B193-880BAF913251}
 		{F859E3A9-29AD-4261-B193-880BAF913251} = {2E0F193F-2567-4BE1-BC88-A89DA03DB239}
 		{35FED9A9-C3C7-4F85-937B-4899E3733D35} = {F859E3A9-29AD-4261-B193-880BAF913251}
+		{A3C22753-DCF5-4106-AE92-94F4470960F2} = {2E0F193F-2567-4BE1-BC88-A89DA03DB239}
+		{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58} = {A3C22753-DCF5-4106-AE92-94F4470960F2}
+		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE} = {A3C22753-DCF5-4106-AE92-94F4470960F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C506D04A-CFD5-4922-B91B-4BE35FA817F7}
