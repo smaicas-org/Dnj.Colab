@@ -1,14 +1,11 @@
-
-using Dnj.Colab.Samples.BlazorApps.Markov.Services;
+using Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
-builder.Services.AddSingleton<ITextGenerationDataModel, TextGenerationDataModel>();
-builder.Services.AddSingleton<IMarkovChainTextGenService, MarkovChainTextGenService>();
+builder.Services.AddTransient<ExampleJsInterop>();
 
 WebApplication app = builder.Build();
 
@@ -30,5 +27,3 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
-
-public partial class Program { }

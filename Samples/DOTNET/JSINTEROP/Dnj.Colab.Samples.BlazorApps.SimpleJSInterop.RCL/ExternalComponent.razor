@@ -1,0 +1,76 @@
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime _js
+@inject ExampleJsInterop _exampleJsInterop
+
+<div class="my-component">
+    <div class="container">
+        <div class="row">
+            This component is defined in an external RCL
+        </div>
+        <div class="row">
+            <input type="text" @bind="_action" />
+            <input type="button" @onclick="async (ev) => await TestClick(ev, _action)" value="Test Click 1" />
+            <input type="button" @onclick="TestClick2" value="Test Click 2" />
+            <input type="button" @onclick="TestClick3" value="Test Click 3" />
+            <input type="button" @onclick="TestExternalFunction" value="Test Ext. Function" />
+            <input type="button" @onclick="TestJSInterop" value="Test Js Interop" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <input type="button" @onclick="TestFunctionWithReturn" value="Test Function with Return" />
+
+            @_returnValue
+        </div>
+    </div>
+</div>
+
+@code {
+    private string _action = string.Empty;
+    private static string _returnValue = string.Empty;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await _js.InvokeVoidAsync("import", "https://code.jquery.com/jquery-3.6.1.min.js").ConfigureAwait(false);
+        await _js.InvokeVoidAsync("import", "./_content/Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL/UnaLibreriaCualquiera.js").ConfigureAwait(false);
+        await base.OnAfterRenderAsync(firstRender).ConfigureAwait(false);
+    }
+
+    private async Task TestClick(MouseEventArgs ev, string action)
+    {
+        await _js.InvokeVoidAsync("alert", action).ConfigureAwait(false);
+    }
+
+    private async Task TestClick2(MouseEventArgs arg)
+    {
+        await _js.InvokeVoidAsync("alert", "Test Click 2").ConfigureAwait(false);
+    }
+
+    private async Task TestClick3()
+    {
+        await _js.InvokeVoidAsync("alert", "Test Click 3").ConfigureAwait(false);
+    }
+
+    private async Task TestExternalFunction()
+    {
+        await _js.InvokeVoidAsync("myFunctionTest").ConfigureAwait(false);
+    }
+
+    private async Task TestJSInterop()
+    {
+        await _exampleJsInterop.Prompt("Example JS Interop").ConfigureAwait(false);
+    }
+
+    private async Task TestFunctionWithReturn()
+    {
+        await _js.InvokeVoidAsync("myFunctionTestWithReturn").ConfigureAwait(false);
+    }
+
+    [JSInvokable]
+    public static async Task<string> ReturnToCSharp(string value)
+    {
+        _returnValue = value;
+        await Task.CompletedTask;
+        return "Todo OKEY";
+    }
+}

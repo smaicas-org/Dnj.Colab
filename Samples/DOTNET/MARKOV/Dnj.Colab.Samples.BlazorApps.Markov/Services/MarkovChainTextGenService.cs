@@ -1,19 +1,23 @@
-﻿using Dnj.Colab.Samples.BlazorApps.Markov.Exceptions;
+﻿using System.Text;
+using Dnj.Colab.Samples.BlazorApps.Markov.Exceptions;
 using Dnj.Colab.Samples.BlazorApps.Markov.Resources;
 
 namespace Dnj.Colab.Samples.BlazorApps.Markov.Services;
 
 public class MarkovChainTextGenService : IMarkovChainTextGenService
 {
-    public Dictionary<string, Trigram> Model { get; set; }
-    private bool _trained;
+    private readonly ITextGenerationDataModel _dataModel;
+    private bool _trained = false;
 
     private static readonly Random Random = new();
 
-    public MarkovChainTextGenService()
+    public MarkovChainTextGenService(ITextGenerationDataModel dataModel)
     {
-        Model = new Dictionary<string, Trigram>();
-        this._trained = false;
+        _dataModel = dataModel ?? throw new ArgumentNullException(nameof(dataModel));
+        if (_dataModel.Model.Count > 0)
+        {
+            _trained = true;
+        }
     }
 
     /// <exception cref="FormatException">sentences.Length < 2</exception>
@@ -33,14 +37,15 @@ public class MarkovChainTextGenService : IMarkovChainTextGenService
             for (int j = 0; j != words.Length - 2; j++)
             {
                 string index = words[j] + words[j + 1];
-                if (!Model.ContainsKey(index))
+                if (!_dataModel.Model.ContainsKey(index))
                 {
-                    Model[index] = new Trigram(words[j], words[j + 1]);
+                    _dataModel.Model[index] = new Trigram(words[j], words[j + 1]);
                 }
-                Model[index].Add(words[j + 2]);
+                _dataModel.Model[index].Add(words[j + 2]);
             }
         }
         _trained = true;
+        await _dataModel.PersistAsync();
     }
 
     /// <exception cref="OutOfMemoryException">There is insufficient memory to allocate a buffer for the returned string.</exception>
@@ -48,9 +53,8 @@ public class MarkovChainTextGenService : IMarkovChainTextGenService
     public async Task TrainAsync(FileStream fs)
     {
         fs.Seek(0, SeekOrigin.Begin);
-        StreamReader reader = new(fs);
+        StreamReader reader = new(fs, Encoding.UTF8);
         await TrainAsync(reader.ReadToEnd());
-
     }
     /// <exception cref="MarkovChainTextGenServiceException">not trained.</exception>
     /// <exception cref="OutOfMemoryException">The length of the resulting string overflows the maximum allowed length (<see cref="System.Int32.MaxValue">Int32.MaxValue</see>).</exception>
@@ -61,9 +65,9 @@ public class MarkovChainTextGenService : IMarkovChainTextGenService
             throw new MarkovChainTextGenServiceException(MarkovChainRes.The_model_has_not_been_trained_yet_);
         }
 
-        List<string> keyList = new(Model.Keys);
+        List<string> keyList = new(_dataModel.Model.Keys);
         List<string> sentence = new();
-        string[] index = Model[keyList[Random.Next(keyList.Count)]].PrefixWords;
+        string[] index = _dataModel.Model[keyList[Random.Next(keyList.Count)]].PrefixWords;
         sentence.Add(index[0]);
         sentence.Add(index[1]);
         for (int i = 1; i < length; i++)
@@ -72,13 +76,13 @@ public class MarkovChainTextGenService : IMarkovChainTextGenService
             index[1] = sentence[i];
             try
             {
-                List<string> suffixes = Model[index[0] + index[1]].Suffixes;
+                List<string> suffixes = _dataModel.Model[index[0] + index[1]].Suffixes;
                 string choice = suffixes[Random.Next(suffixes.Count)];
                 sentence.Add(choice);
             }
             catch (KeyNotFoundException)
             {
-                index = Model[keyList[Random.Next(keyList.Count)]].PrefixWords;
+                index = _dataModel.Model[keyList[Random.Next(keyList.Count)]].PrefixWords;
                 sentence.Add(index[0]);
                 sentence.Add(index[1]);
             }
@@ -99,19 +103,4 @@ public interface IMarkovChainTextGenService
     Task TrainAsync(string text);
     Task TrainAsync(FileStream fs);
     Task<string> GenerateText(int length = 20);
-}
-
-public class Trigram
-{
-
-    public string[] PrefixWords;
-    public List<string> Suffixes;
-
-    public Trigram(string prefix1, string prefix2)
-    {
-        PrefixWords = new string[] { prefix1, prefix2 };
-        this.Suffixes = new List<string>();
-    }
-
-    public void Add(string suffix) => Suffixes.Add(suffix);
 }
