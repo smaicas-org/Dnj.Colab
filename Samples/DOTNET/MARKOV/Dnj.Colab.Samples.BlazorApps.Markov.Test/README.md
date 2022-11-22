@@ -6,7 +6,7 @@ C#
 
 ## DESCRIPTION
 This is a sample that shows how to test using xUnit and WebApplicationFactory
-and use it to test Dnj.Colab.Samples.BlazorApps.Markov project
+and use it to test Dnj.Colab.Samples.BlazorApps.Markov project.
 
 ## LICENSE
 [GPL3](https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE)

@@ -1,0 +1,63 @@
+﻿@using Microsoft.JSInterop
+
+@namespace Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL
+
+@inject RecorderComponentJsInterop recorderComponentJs
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <button class="btn btn-outline-primary" disabled="@Recording" @onclick=Record>
+                <span class="icon-mic align-text-bottom"></span>
+            </button>
+            <button class="btn btn-outline-primary" disabled="@(!Recording)" @onclick=Stop>
+                <span class="icon-stop align-text-bottom"></span>
+            </button>
+        </div>
+
+        <div class="col-12 col-md-9 text-end">
+
+            @{
+                string _displayCanvas = Recording ? "inline-flex" : "none";
+            }
+            <canvas @ref="_canvasAudioRef" id="audio-canvas" class="w-100 bg-light" style="display: @_displayCanvas" height="30"></canvas>
+            @{
+                object _displayAudioControl = (!Recording && Recorded) ? "inline-flex" : "none"; ;
+            }
+            <audio @ref="_audioFileRef" id="audio-file" class="w-100" style="display: @_displayAudioControl" controls>
+            </audio>
+        </div>
+
+    </div>
+
+</div>
+
+@code {
+
+    bool Recording { get; set; } = false;
+    bool Recorded { get; set; } = false;
+    private ElementReference _audioFileRef;
+    private ElementReference _canvasAudioRef;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+    }
+
+    private async Task Record()
+    {
+        Recording = true;
+        await recorderComponentJs.StartRecording();
+        await recorderComponentJs.VisualizeCanvas(_canvasAudioRef);
+        StateHasChanged();
+    }
+
+    private async Task Stop()
+    {
+        Recording = false;
+        var audio = await recorderComponentJs.StopRecording();
+        var audioUrl = await recorderComponentJs.SetAudioSource(_audioFileRef);
+        Recorded = true;
+        StateHasChanged();
+    }
+}

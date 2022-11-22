@@ -72,9 +72,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JSINTEROP", "JSINTEROP", "{A3C22753-DCF5-4106-AE92-94F4470960F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.BlazorApps.SimpleJSInterop", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.csproj", "{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.SimpleJSInterop", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.csproj", "{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL.csproj", "{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL\Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL.csproj", "{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.JSInteropTS", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.JSInteropTS\Dnj.Colab.Samples.BlazorApps.JSInteropTS.csproj", "{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +106,14 @@ Global
 		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +140,8 @@ Global
 		{A3C22753-DCF5-4106-AE92-94F4470960F2} = {2E0F193F-2567-4BE1-BC88-A89DA03DB239}
 		{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58} = {A3C22753-DCF5-4106-AE92-94F4470960F2}
 		{6DF19E89-D16B-4A99-A254-94E0CB4E61BE} = {A3C22753-DCF5-4106-AE92-94F4470960F2}
+		{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE} = {A3C22753-DCF5-4106-AE92-94F4470960F2}
+		{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7} = {A3C22753-DCF5-4106-AE92-94F4470960F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C506D04A-CFD5-4922-B91B-4BE35FA817F7}
