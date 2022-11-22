@@ -10,4 +10,11 @@
     <ProjectReference Include="..\Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL\Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\favicon.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

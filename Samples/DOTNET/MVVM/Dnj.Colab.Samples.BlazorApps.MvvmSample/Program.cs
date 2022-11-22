@@ -1,4 +1,4 @@
-using Dnj.Colab.Samples.BlazorApps.MvvmSample.ViewModels;
+using Dnj.Colab.Samples.BlazorApps.MvvmSample.RCL.ViewModels;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

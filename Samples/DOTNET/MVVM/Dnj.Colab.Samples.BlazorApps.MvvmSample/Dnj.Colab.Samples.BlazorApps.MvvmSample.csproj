@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dnj.Colab.Sample.BlazorApp.MvvmSample.RCL\Dnj.Colab.Sample.BlazorApp.MvvmSample.RCL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="wwwroot\favicon.png">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

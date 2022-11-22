@@ -1,0 +1,48 @@
+﻿@using Dnj.Colab.Samples.FileDisclaimer.RCL.ViewModels
+@namespace Dnj.Colab.Samples.FileDisclaimer.RCL
+
+<div class="container">
+    <div class="row p-2">
+        <div class="col-12 col-md-3">
+            <label for="projectSelector">@ViewModel.DestinyFolder</label>
+            <input @onclick="async (args) => await ViewModel.SelectDestinyFolder()" id="projectSelector" type="button" class="btn btn-dark" value="Select Destiny">
+        </div>
+    </div>
+    <div class="row p-2">
+        <textarea @bind="ViewModel.DisclaimerText" class="disc-textarea"></textarea>
+    </div>
+    <div class="row p-2">
+        @foreach (var fe in @ViewModel.AllowedFileExtensions)
+        {
+            <span class="badge bg-info text-dark mx-2 w-auto">*.@fe.Value</span>
+        }
+    </div>
+    <div class="row p-2">
+        @if (ViewModel.Loading)
+        {
+            <span>Loading</span>
+        }
+        else
+        {
+            <input type="button" @onclick="async ()=> await ViewModel.Generate()" value="Generate" />
+        }
+    </div>
+    <div class="row p-2">
+
+        @if (!string.IsNullOrEmpty(ViewModel.Error))
+        {
+            <div class="text-danger">@ViewModel.Error</div>
+        }
+        @if (ViewModel.ProcessedFileNumber > 0)
+        {
+            <div class="bg-info">
+                <b> @ViewModel.ProcessedFileNumber archivos procesados </b>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [CascadingParameter(Name = "ViewModel")]
+    public IAddFileDisclaimerVm ViewModel { get; set; }
+}

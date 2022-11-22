@@ -2,36 +2,8 @@
 
 <PageTitle>Simple Todo Manager</PageTitle>
 
-@inherits ComponentBase
-@inject IDnjTodoViewModel ViewModel
-@using System.ComponentModel;
-@using Dnj.Colab.Samples.BlazorApps.MvvmSample.ViewModels
-@implements IDisposable
-
-<h1>Items to do: @ViewModel.TodoItems</h1>
-
-<CascadingValue Value=@ViewModel Name="ViewModel">
-    <TodoListComponent />
-    <TodoFormComponent />
-</CascadingValue>
+<TodoComponent></TodoComponent>
 
 @code {
-
-    protected override async Task OnInitializedAsync()
-    {
-        ViewModel.PropertyChanged += OnPropertyChangedHandler;
-
-        await base.OnInitializedAsync();
-    }
-
-    async void OnPropertyChangedHandler(object? sender, PropertyChangedEventArgs e)
-    {
-        await InvokeAsync(StateHasChanged).ConfigureAwait(false);
-    }
-
-    public void Dispose()
-    {
-        ViewModel.PropertyChanged -= OnPropertyChangedHandler;
-    }
 
 }
