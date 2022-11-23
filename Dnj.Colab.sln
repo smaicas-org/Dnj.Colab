@@ -6,10 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E4A2AB78-2E57-454F-9D0E-505B15A3F551}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
-		Documentation\README-To_Fill.md = Documentation\README-To_Fill.md
 		README.md = README.md
-		Documentation\README_en.md = Documentation\README_en.md
-		Documentation\README_es.md = Documentation\README_es.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{9B329E77-1DFE-4B09-9F6D-6F5A262DC33F}"
@@ -53,14 +50,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level2", "Level2", "{B119254D-C6B3-43E2-8963-F05D97549CD7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{26096D16-510C-4E06-B283-78B75BD7C82C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Partials", "Partials", "{A5A0BB90-3C59-4F14-A3A0-060E99CF617F}"
-	ProjectSection(SolutionItems) = preProject
-		Documentation\Partials\README_code_guidelines_en.md = Documentation\Partials\README_code_guidelines_en.md
-		Documentation\Partials\README_code_guidelines_es.md = Documentation\Partials\README_code_guidelines_es.md
-		Documentation\Partials\README_deliver_code_en.md = Documentation\Partials\README_deliver_code_en.md
-		Documentation\Partials\README_deliver_code_es.md = Documentation\Partials\README_deliver_code_es.md
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.Markov", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.BlazorApps.Markov\Dnj.Colab.Samples.BlazorApps.Markov.csproj", "{C3173679-45A6-4F42-9B3A-03656CE22A01}"
 EndProject
@@ -162,7 +151,6 @@ Global
 		{C53C2A35-1E39-49F8-ADBE-5C4481F1AFAA} = {2A4D874B-5109-475E-BD9E-895B4385172E}
 		{B119254D-C6B3-43E2-8963-F05D97549CD7} = {2A4D874B-5109-475E-BD9E-895B4385172E}
 		{26096D16-510C-4E06-B283-78B75BD7C82C} = {2A4D874B-5109-475E-BD9E-895B4385172E}
-		{A5A0BB90-3C59-4F14-A3A0-060E99CF617F} = {E4A2AB78-2E57-454F-9D0E-505B15A3F551}
 		{C3173679-45A6-4F42-9B3A-03656CE22A01} = {F859E3A9-29AD-4261-B193-880BAF913251}
 		{F859E3A9-29AD-4261-B193-880BAF913251} = {2E0F193F-2567-4BE1-BC88-A89DA03DB239}
 		{35FED9A9-C3C7-4F85-937B-4899E3733D35} = {F859E3A9-29AD-4261-B193-880BAF913251}
