@@ -1,9 +1,35 @@
 ## Dnj.Colab
 
 ****
+Introduction
+============
 
-[English Documentation](Documentation/README_en.md)
+This repository aims to be a meeting point for programmers of all levels. 
+The idea is not only to improve or learn programming but also to learn code integration, to know and adopt a professional way of working. 
+Appropriate to the way you work in a company. It is an open source repository and anyone is invited to contribute.
 
-[Documentaci髇 en Espa駉l](Documentation/README_es.md)
+There is no restriction of languages or frameworks.
+You can contribute code of any other language or framework that is not currently
+categorized in the repository ahead.
+In that case it would be interesting if you yourself were responsible for the code review to
+those categories. Get in touch to manage the permits (https://discord.gg/rPF39zRWQp)
+****
+[English Documentation](https://github.com/smaicas-org/Dnj.Colab/wiki/English-Documentation)
+
+****
+Introducci贸n
+============
+
+Este repositorio pretende ser un punto de encuentro para programadores de todos los niveles. 
+La idea es no solo mejorar o aprender programaci贸n si no aprender integraci贸n de c贸digo, conocer y adoptar una manera de trabajar profesional. 
+Adecuada a la manera que se trabaja en una empresa. Es un repositorio de codigo abierto y cualquier persona est谩 invitada a colaborar.
+
+No hay restricci贸n de lenguajes o frameworks.
+Si deseas aportar c贸digo de otros lenguajes o frameworks que no se encuentran actualmente
+categorizados en el repositorio adelante. 
+En ese caso ser铆a interesante que t煤 mismo fueras el responsable de la revisi贸n de c贸digo para
+esas categor铆as. Ponte en contacto para gestionar los permisos (https://discord.gg/rPF39zRWQp)
+****
+[Documentaci贸n en Espa帽ol](https://github.com/smaicas-org/Dnj.Colab/wiki/Documentaci%C3%B3n-en-Espa%C3%B1ol)
 
 ****
