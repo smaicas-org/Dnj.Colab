@@ -14,7 +14,7 @@ categorized in the repository ahead.
 In that case it would be interesting if you yourself were responsible for the code review to
 those categories. Get in touch to manage the permits (https://discord.gg/rPF39zRWQp)
 ****
-[English Documentation](Documentation/README_en.md)
+[English Documentation](https://github.com/smaicas-org/Dnj.Colab/wiki/English-Documentation)
 
 ****
 Introducción
@@ -30,6 +30,6 @@ categorizados en el repositorio adelante.
 En ese caso sería interesante que tú mismo fueras el responsable de la revisión de código para
 esas categorías. Ponte en contacto para gestionar los permisos (https://discord.gg/rPF39zRWQp)
 ****
-[Documentación en Español](Documentation/README_es.md)
+[Documentación en Español](https://github.com/smaicas-org/Dnj.Colab/wiki/Documentaci%C3%B3n-en-Espa%C3%B1ol)
 
 ****
