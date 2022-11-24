@@ -1,0 +1,76 @@
+﻿@page "/textGen"
+
+@using Dnj.Colab.Samples.Markov.Services
+@inject IMarkovChainTextGenService Markov
+@namespace Dnj.Net.Razor.Components
+
+<div class="container">
+    <div class="content row p-4">@GeneratedString</div>
+    <div class="content row p-4">
+        <div class="col-12">
+            @*<textarea id="trainText" class="w-100" placeholder="Entrena" @bind="TrainText"></textarea>*@
+            <InputFile OnChange="@LoadFiles" multiple />
+        </div>
+        <hr/>
+        @if (!isLoading)
+        {
+            <div class="col-12">
+                <input type="button" class="btn btn-outline-success" @onclick="GenerateText" value="Generate Text" />
+            </div>
+        }
+        else
+        {
+            <Loading></Loading>
+        }
+        <div class="text-danger">
+            @ErrorMessage
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private string GeneratedString { get; set; } = string.Empty;
+    private string TrainText { get; set; } = string.Empty;
+    private bool isLoading = false;
+    private List<IBrowserFile> loadedFiles = new();
+    private const int maxAllowedFiles = 3;
+    private const long maxFileSize = 1024 * 3000;
+    private string ErrorMessage { get; set; }
+
+    private async Task GenerateText()
+    {
+        GeneratedString = await Markov.GenerateText(200);
+    }
+    private async Task LoadFiles(InputFileChangeEventArgs e)
+    {
+        isLoading = true;
+        StateHasChanged();
+        loadedFiles.Clear();
+
+        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            try
+            {
+                loadedFiles.Add(file);
+                var trustedFileNameForFileStorage = Path.GetRandomFileName();
+                var path = Path.Combine("./unsafe_uploads",
+                    trustedFileNameForFileStorage);
+
+                await using FileStream fs = new(path, FileMode.Create);
+                await file.OpenReadStream(maxFileSize).CopyToAsync(fs);
+                //StreamReader reader = new StreamReader(fs);
+                //string muchoTexto = reader.ReadToEnd();
+                await Markov.TrainAsync(fs);
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = ex.Message;
+                StateHasChanged();
+            }
+        }
+
+        isLoading = false;
+    }
+}
+

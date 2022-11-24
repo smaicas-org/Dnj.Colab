@@ -51,29 +51,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level2", "Level2", "{B11925
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{26096D16-510C-4E06-B283-78B75BD7C82C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.Markov", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.BlazorApps.Markov\Dnj.Colab.Samples.BlazorApps.Markov.csproj", "{C3173679-45A6-4F42-9B3A-03656CE22A01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.Markov", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.Markov\Dnj.Colab.Samples.Markov.csproj", "{C3173679-45A6-4F42-9B3A-03656CE22A01}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MARKOV", "MARKOV", "{F859E3A9-29AD-4261-B193-880BAF913251}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.Markov.Test", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.BlazorApps.Markov.Test\Dnj.Colab.Samples.BlazorApps.Markov.Test.csproj", "{35FED9A9-C3C7-4F85-937B-4899E3733D35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.Markov.Test", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.Markov.Test\Dnj.Colab.Samples.Markov.Test.csproj", "{35FED9A9-C3C7-4F85-937B-4899E3733D35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JSINTEROP", "JSINTEROP", "{A3C22753-DCF5-4106-AE92-94F4470960F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.SimpleJSInterop", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.csproj", "{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleJSInterop", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.SimpleJSInterop\Dnj.Colab.Samples.SimpleJSInterop.csproj", "{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL\Dnj.Colab.Samples.BlazorApps.SimpleJSInterop.RCL.csproj", "{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleJSInterop.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.SimpleJSInterop.RCL\Dnj.Colab.Samples.SimpleJSInterop.RCL.csproj", "{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL\Dnj.Colab.Samples.BlazorApps.JSInteropTS.RCL.csproj", "{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.JSInteropTS.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.JSInteropTS.RCL\Dnj.Colab.Samples.JSInteropTS.RCL.csproj", "{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.JSInteropTS", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.BlazorApps.JSInteropTS\Dnj.Colab.Samples.BlazorApps.JSInteropTS.csproj", "{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.JSInteropTS", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.JSInteropTS\Dnj.Colab.Samples.JSInteropTS.csproj", "{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CQRS", "CQRS", "{6E475CE2-9E61-411A-B5AC-2E2E9B33124B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.SimpleCqrs", "Samples\DOTNET\CQRS\Dnj.Colab.Samples.BlazorApps.SimpleCqrs\Dnj.Colab.Samples.BlazorApps.SimpleCqrs.csproj", "{9F3D3053-6340-4B15-939A-A68A460D7052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleCqrs", "Samples\DOTNET\CQRS\Dnj.Colab.Samples.SimpleCqrs\Dnj.Colab.Samples.SimpleCqrs.csproj", "{9F3D3053-6340-4B15-939A-A68A460D7052}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Sample.BlazorApp.MvvmSample.RCL", "Samples\DOTNET\MVVM\Dnj.Colab.Sample.BlazorApp.MvvmSample.RCL\Dnj.Colab.Sample.BlazorApp.MvvmSample.RCL.csproj", "{566D10FF-273F-42A8-B751-FE06EBC13128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample.RCL", "Samples\DOTNET\MVVM\Dnj.Colab.Samples.MvvmSample.RCL\Dnj.Colab.Samples.MvvmSample.RCL.csproj", "{566D10FF-273F-42A8-B751-FE06EBC13128}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.BlazorApps.MvvmSample", "Samples\DOTNET\MVVM\Dnj.Colab.Samples.BlazorApps.MvvmSample\Dnj.Colab.Samples.BlazorApps.MvvmSample.csproj", "{56772F25-BDC7-4CF8-A81D-6CF1391235D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample", "Samples\DOTNET\MVVM\Dnj.Colab.Samples.MvvmSample\Dnj.Colab.Samples.MvvmSample.csproj", "{56772F25-BDC7-4CF8-A81D-6CF1391235D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{134A8AEB-52AD-4973-9635-522ACB154C89}"
 EndProject

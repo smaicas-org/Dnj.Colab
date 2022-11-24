@@ -1,0 +1,37 @@
+﻿@using System.ComponentModel;
+@using Dnj.Colab.Samples.MvvmSample.RCL.ViewModels
+
+@namespace Dnj.Colab.Samples.MvvmSample.RCL
+
+@inherits ComponentBase
+@inject IDnjTodoViewModel ViewModel
+
+@implements IDisposable
+
+<h1>Items to do: @ViewModel.TodoItems</h1>
+
+<CascadingValue Value=@ViewModel Name="ViewModel">
+    <TodoListComponent />
+    <TodoFormComponent />
+</CascadingValue>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        ViewModel.PropertyChanged += OnPropertyChangedHandler;
+
+        await base.OnInitializedAsync();
+    }
+
+    async void OnPropertyChangedHandler(object? sender, PropertyChangedEventArgs e)
+    {
+        await InvokeAsync(StateHasChanged).ConfigureAwait(false);
+    }
+
+    public void Dispose()
+    {
+        ViewModel.PropertyChanged -= OnPropertyChangedHandler;
+    }
+
+}

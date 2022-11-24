@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Dnj.Colab.Samples.MvvmSample.RCL.Model
+@using Dnj.Colab.Samples.MvvmSample.RCL.ViewModels
+
+@namespace Dnj.Colab.Samples.MvvmSample.RCL
+
+<hr />
+
+<EditForm Model="@ViewModel.TodoItem" OnValidSubmit="@SaveTodoItem">
+    <div class="col-4">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <InputText class="form-control" id="title" @bind-Value=@ViewModel.TodoItem.Title />
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <InputDate class="form-control" id="date" @bind-Value=@ViewModel.TodoItem.Date />
+        </div>
+        <div class="form-group">
+            <label for="notes">Notes</label>
+            <InputTextArea class="form-control" id="notes" @bind-Value=@ViewModel.TodoItem.Notes />
+        </div>
+        <div class="form-check">
+            <InputCheckbox class="form-check-input" id="done" @bind-Value=@ViewModel.TodoItem.Done />
+            <label for="done" class="form-check-label">Done</label>
+        </div>
+        <input type="hidden" @bind-value="@ViewModel.TodoItem.Id" />
+        <button type="submit" class="btn btn-primary" disabled="@ViewModel.IsBusy">Save</button>
+    </div>
+</EditForm>
+
+
+@code {
+    [CascadingParameter(Name = "ViewModel")]
+    IDnjTodoViewModel ViewModel { get; set; }
+
+    void SaveTodoItem()
+    {
+        ViewModel.SaveTodoItem(ViewModel.TodoItem);
+        ViewModel.TodoItem = new TodoItem();
+    }
+
+}
