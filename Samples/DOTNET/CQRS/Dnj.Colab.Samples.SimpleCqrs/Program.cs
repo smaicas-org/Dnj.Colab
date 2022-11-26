@@ -1,4 +1,3 @@
-using Dnj.Colab.Samples.MvvmSample.RCL.ViewModels;
 using Dnj.Colab.Samples.SimpleCqrs.Data;
 using Dnj.Colab.Samples.SimpleCqrs.Mediator;
 using FluentValidation;
@@ -12,14 +11,14 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
 // DB Context
-builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("AppDbContext"));
+builder.Services.AddDbContextFactory<AppDbContext>(options => options.UseInMemoryDatabase("AppDbContext"));
 
 // MEDIATOR && FLUENTVALIDATION
 builder.Services.AddMediatR(typeof(Program).Assembly);
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(DnjPipelineFluentValidationBehavior<,>));
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
-builder.Services.AddScoped<IDnjTodoViewModel, DnjTodoViewModel>();
+//builder.Services.AddScoped<IDnjTodoViewModel, CqrsSampleTodoViewModel>();
 
 WebApplication app = builder.Build();
 

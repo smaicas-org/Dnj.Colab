@@ -34,9 +34,9 @@
     [CascadingParameter(Name = "ViewModel")]
     IDnjTodoViewModel ViewModel { get; set; }
 
-    void SaveTodoItem()
+    async Task SaveTodoItem()
     {
-        ViewModel.SaveTodoItem(ViewModel.TodoItem);
+        await ViewModel.SaveTodoItem(ViewModel.TodoItem);
         ViewModel.TodoItem = new TodoItem();
     }
 

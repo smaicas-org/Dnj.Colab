@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MVVM\Dnj.Colab.Samples.MvvmSample.Abstractions\Dnj.Colab.Samples.MvvmSample.Abstractions.csproj" />
     <ProjectReference Include="..\..\MVVM\Dnj.Colab.Samples.MvvmSample.RCL\Dnj.Colab.Samples.MvvmSample.RCL.csproj" />
   </ItemGroup>
 

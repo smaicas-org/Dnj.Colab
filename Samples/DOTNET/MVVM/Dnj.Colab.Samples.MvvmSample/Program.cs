@@ -1,4 +1,5 @@
 using Dnj.Colab.Samples.MvvmSample.RCL.ViewModels;
+using Dnj.Colab.Samples.MvvmSample.ViewModels;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +7,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-builder.Services.AddScoped<IDnjTodoViewModel, DnjTodoViewModel>();
+builder.Services.AddScoped<IDnjTodoViewModel, MvvmSampleTodoViewModel>();
 
 WebApplication app = builder.Build();
 

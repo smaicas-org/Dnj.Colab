@@ -7,7 +7,7 @@ namespace Dnj.Colab.Samples.SimpleCqrs.Data.Entities;
 public class TodoItemEntity
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public Guid Id { get; set; }
     [Required]
     public string Title { get; set; }

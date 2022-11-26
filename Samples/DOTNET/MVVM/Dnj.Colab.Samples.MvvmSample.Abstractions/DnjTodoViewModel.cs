@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Dnj.Colab.Samples.MvvmSample.RCL.Model;
+using Dnj.Colab.Samples.MvvmSample.RCL.ViewModels;
 
-namespace Dnj.Colab.Samples.MvvmSample.RCL.ViewModels;
+namespace Dnj.Colab.Samples.MvvmSample.ViewModels.Abstractions;
 
-public class DnjTodoViewModel : IDnjTodoViewModel
+public abstract class DnjTodoViewModel : IDnjTodoViewModel
 {
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -29,10 +30,10 @@ public class DnjTodoViewModel : IDnjTodoViewModel
     }
 
     private List<TodoItem> _toDoItemList = new();
-    public List<TodoItem> TodoItemList
+    public virtual List<TodoItem> TodoItemList
     {
         get => _toDoItemList;
-        private set
+        set
         {
             _toDoItemList = value;
             OnPropertyChanged();
@@ -52,10 +53,10 @@ public class DnjTodoViewModel : IDnjTodoViewModel
     }
     public int TodoItems => TodoItemList.Count(i => i.Done.Equals(false));
 
-    public void SaveTodoItem(TodoItem todoitem)
+    public virtual async Task SaveTodoItem(TodoItem todoitem)
     {
         IsBusy = true;
-        if (todoitem.Id.Equals(Guid.Empty))
+        if (todoitem.Id.Equals(default(Guid)))
         {
             todoitem.Id = Guid.NewGuid();
         }

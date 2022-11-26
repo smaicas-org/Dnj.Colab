@@ -10,5 +10,5 @@ public interface IDnjTodoViewModel : INotifyPropertyChanged
     TodoItem TodoItem { get; set; }
     List<TodoItem> TodoItemList { get; }
 
-    void SaveTodoItem(TodoItem todoitem);
+    Task SaveTodoItem(TodoItem todoitem);
 }
