@@ -68,11 +68,11 @@ public class GamesComponentVm : IGamesComponentVm
     }
 
     /// INotifyDataErrorInfo Implementation
-    public async Task AddErrors(IEnumerable<ValidationFailure> failures)
+    protected async Task AddErrors(IEnumerable<ValidationFailure> failures)
     {
         foreach (ValidationFailure validationFailure in failures)
         {
-            var propNameArr = validationFailure.PropertyName.Split(".");
+            string[] propNameArr = validationFailure.PropertyName.Split(".");
             if (_errors.ContainsKey(propNameArr[^1]))
             {
                 await Task.Run(() => _errors[propNameArr[^1]].ToList().Add(validationFailure));
