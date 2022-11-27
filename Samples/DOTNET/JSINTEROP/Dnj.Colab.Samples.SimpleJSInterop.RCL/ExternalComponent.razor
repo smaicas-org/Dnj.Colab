@@ -1,4 +1,11 @@
 ﻿@using Microsoft.JSInterop
+@* This file is copyright © 2022 Dnj.Colab repository authors.
+
+Dnj.Colab content is distributed as free software: you can redistribute it and/or modify it under the terms of the General Public License version 3 as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Dnj.Colab content is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the General Public License version 3 for more details.
+
+You should have received a copy of the General Public License version 3 along with this repository. If not, see <https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE>. *@
 @inject IJSRuntime _js
 @inject ExampleJsInterop _exampleJsInterop
 
@@ -8,17 +15,17 @@
             This component is defined in an external RCL
         </div>
         <div class="row">
-            <input type="text" @bind="_action" />
-            <input type="button" @onclick="async (ev) => await TestClick(ev, _action)" value="Test Click 1" />
-            <input type="button" @onclick="TestClick2" value="Test Click 2" />
-            <input type="button" @onclick="TestClick3" value="Test Click 3" />
-            <input type="button" @onclick="TestExternalFunction" value="Test Ext. Function" />
-            <input type="button" @onclick="TestJSInterop" value="Test Js Interop" />
+            <input type="text" @bind="_action"/>
+            <input type="button" @onclick="async ev => await TestClick(ev, _action)" value="Test Click 1"/>
+            <input type="button" @onclick="TestClick2" value="Test Click 2"/>
+            <input type="button" @onclick="TestClick3" value="Test Click 3"/>
+            <input type="button" @onclick="TestExternalFunction" value="Test Ext. Function"/>
+            <input type="button" @onclick="TestJSInterop" value="Test Js Interop"/>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <input type="button" @onclick="TestFunctionWithReturn" value="Test Function with Return" />
+            <input type="button" @onclick="TestFunctionWithReturn" value="Test Function with Return"/>
 
             @_returnValue
         </div>
@@ -73,4 +80,5 @@
         await Task.CompletedTask;
         return "Todo OKEY";
     }
+
 }

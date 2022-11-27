@@ -1,36 +1,43 @@
-﻿@using Microsoft.AspNetCore.Components
-@using Dnj.Colab.Samples.MvvmSample.RCL.Model
+﻿@using Dnj.Colab.Samples.MvvmSample.RCL.Model
 @using Dnj.Colab.Samples.MvvmSample.RCL.ViewModels
+@* This file is copyright © 2022 Dnj.Colab repository authors.
+
+Dnj.Colab content is distributed as free software: you can redistribute it and/or modify it under the terms of the General Public License version 3 as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Dnj.Colab content is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the General Public License version 3 for more details.
+
+You should have received a copy of the General Public License version 3 along with this repository. If not, see <https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE>. *@
 
 @namespace Dnj.Colab.Samples.MvvmSample.RCL
 
-<hr />
+<hr/>
 
 <EditForm Model="@ViewModel.TodoItem" OnValidSubmit="@SaveTodoItem">
     <div class="col-4">
         <div class="form-group">
             <label for="title">Title</label>
-            <InputText class="form-control" id="title" @bind-Value=@ViewModel.TodoItem.Title />
+            <InputText class="form-control" id="title" @bind-Value="@ViewModel.TodoItem.Title"/>
         </div>
         <div class="form-group">
             <label for="date">Date</label>
-            <InputDate class="form-control" id="date" @bind-Value=@ViewModel.TodoItem.Date />
+            <InputDate class="form-control" id="date" @bind-Value="@ViewModel.TodoItem.Date"/>
         </div>
         <div class="form-group">
             <label for="notes">Notes</label>
-            <InputTextArea class="form-control" id="notes" @bind-Value=@ViewModel.TodoItem.Notes />
+            <InputTextArea class="form-control" id="notes" @bind-Value="@ViewModel.TodoItem.Notes"/>
         </div>
         <div class="form-check">
-            <InputCheckbox class="form-check-input" id="done" @bind-Value=@ViewModel.TodoItem.Done />
+            <InputCheckbox class="form-check-input" id="done" @bind-Value="@ViewModel.TodoItem.Done"/>
             <label for="done" class="form-check-label">Done</label>
         </div>
-        <input type="hidden" @bind-value="@ViewModel.TodoItem.Id" />
+        <input type="hidden" @bind-value="@ViewModel.TodoItem.Id"/>
         <button type="submit" class="btn btn-primary" disabled="@ViewModel.IsBusy">Save</button>
     </div>
 </EditForm>
 
 
 @code {
+
     [CascadingParameter(Name = "ViewModel")]
     IDnjTodoViewModel ViewModel { get; set; }
 

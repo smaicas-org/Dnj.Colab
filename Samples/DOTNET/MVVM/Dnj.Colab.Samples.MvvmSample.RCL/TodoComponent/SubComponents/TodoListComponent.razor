@@ -1,18 +1,27 @@
 ﻿@using Dnj.Colab.Samples.MvvmSample.RCL.Model
 @using Dnj.Colab.Samples.MvvmSample.RCL.ViewModels
+@* This file is copyright © 2022 Dnj.Colab repository authors.
+
+Dnj.Colab content is distributed as free software: you can redistribute it and/or modify it under the terms of the General Public License version 3 as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Dnj.Colab content is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the General Public License version 3 for more details.
+
+You should have received a copy of the General Public License version 3 along with this repository. If not, see <https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE>. *@
 
 @namespace Dnj.Colab.Samples.MvvmSample.RCL
 
 @if (ViewModel?.TodoItemList == null)
 {
-    <p><em>Loading...</em></p>
+    <p>
+        <em>Loading...</em>
+    </p>
 }
 else
 {
     <div class="card-deck">
-        @foreach (var todoitem in ViewModel.TodoItemList.OrderBy(i => i.Date).ThenBy(i => i.Done))
+        @foreach (TodoItem todoitem in ViewModel.TodoItemList.OrderBy(i => i.Date).ThenBy(i => i.Done))
         {
-            <div class="card mb-3 @(todoitem.Done ? "bg-light" : "text-white bg-dark" )" style="min-width: 18rem; max-width: 18rem;">
+            <div class="card mb-3 @(todoitem.Done ? "bg-light" : "text-white bg-dark")" style="max-width: 18rem; min-width: 18rem;">
                 <div class="card-header">@(todoitem.Date?.ToShortDateString() ?? string.Empty)</div>
                 <div class="card-body">
                     <h5 class="card-title">@todoitem.Title</h5>
@@ -25,6 +34,7 @@ else
 }
 
 @code {
+
     [CascadingParameter(Name = "ViewModel")]
     IDnjTodoViewModel ViewModel { get; set; }
 
@@ -32,4 +42,5 @@ else
     {
         ViewModel.TodoItem = todoitem;
     }
+
 }

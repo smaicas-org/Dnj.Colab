@@ -1,22 +1,29 @@
-﻿@using Dnj.Colab.Samples.SimpleCqrs.RCL.ViewModels
-@using Dnj.Colab.Samples.SimpleCqrs.RCL.Models
+﻿@* This file is copyright © 2022 Dnj.Colab repository authors.
+
+Dnj.Colab content is distributed as free software: you can redistribute it and/or modify it under the terms of the General Public License version 3 as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Dnj.Colab content is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the General Public License version 3 for more details.
+
+You should have received a copy of the General Public License version 3 along with this repository. If not, see <https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE>. *@
 @namespace Dnj.Colab.Samples.SimpleCqrs.RCL
 
+@using Dnj.Colab.Samples.SimpleCqrs.RCL.ViewModels
+@using Dnj.Colab.Samples.SimpleCqrs.RCL.Models
 @inherits ComponentBase
 
 <div class="container">
     <div class="row">
         <div class="col-12">
             <label for="item-title" class="fw-bold">Título</label>
-            <input id="item-title" type="text" @bind="GamesComponentVm.CurrentGame.Title" class="form-control" />
+            <input id="item-title" type="text" @bind="GamesComponentVm.CurrentGame.Title" class="form-control"/>
             @if (GamesComponentVm.HasErrors)
             {
                 <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.Title))</div>
             }
-            </div>
+        </div>
         <div class="col-12">
             <label for="item-genre" class="fw-bold">Género</label>
-            <input id="item-genre" type="text" @bind="GamesComponentVm.CurrentGame.Genre" class="form-control" />
+            <input id="item-genre" type="text" @bind="GamesComponentVm.CurrentGame.Genre" class="form-control"/>
             @if (GamesComponentVm.HasErrors)
             {
                 <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.Genre))</div>
@@ -24,7 +31,7 @@
         </div>
         <div class="col-12">
             <label for="item-platform" class="fw-bold">Plataforma</label>
-            <input id="item-platform" type="text" @bind="GamesComponentVm.CurrentGame.Platform" class="form-control" />
+            <input id="item-platform" type="text" @bind="GamesComponentVm.CurrentGame.Platform" class="form-control"/>
             @if (GamesComponentVm.HasErrors)
             {
                 <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.Platform))</div>
@@ -32,7 +39,7 @@
         </div>
         <div class="col-12">
             <label for="item-releasedate" class="fw-bold">Fecha de lanzamiento</label>
-            <input id="item-releasedate" type="date" @bind="GamesComponentVm.CurrentGame.ReleaseDate" class="form-control" />
+            <input id="item-releasedate" type="date" @bind="GamesComponentVm.CurrentGame.ReleaseDate" class="form-control"/>
             @if (GamesComponentVm.HasErrors)
             {
                 <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.ReleaseDate))</div>
@@ -58,7 +65,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (GameDto dto in @GamesComponentVm.Games)
+            @foreach (GameDto dto in GamesComponentVm.Games)
             {
                 <tr>
                     <td>@dto.Id</td>
@@ -66,13 +73,17 @@
                     <td>@dto.Platform</td>
                     <td>@dto.Genre</td>
                     <td>@dto.ReleaseDate</td>
-                    <td><input type="button" class="btn-info" value="Edit" @onclick="async () => await EditGame(dto)"/></td>
-                    <td><input type="button" class="btn-danger" value="Delete" @onclick="async () => await DeleteGame(dto)"/></td>
+                    <td>
+                        <input type="button" class="btn-info" value="Edit" @onclick="async () => await EditGame(dto)"/>
+                    </td>
+                    <td>
+                        <input type="button" class="btn-danger" value="Delete" @onclick="async () => await DeleteGame(dto)"/>
+                    </td>
                 </tr>
             }
             </tbody>
         </table>
-            
+
     </div>
 </div>
 
