@@ -32,14 +32,15 @@ public class AddFileDisclaimerVm : IAddFileDisclaimerVm
         int processedFiles = default;
         foreach (FileExtensionComment allowedFileExtension in AllowedFileExtensions)
         {
-            StringBuilder sb = new(allowedFileExtension.CommentOpen);
-            sb.Append(DisclaimerText);
-            sb.Append(allowedFileExtension.CommentClose);
-            sb.Append(Environment.NewLine);
-
-            string[] files = Directory.GetFiles(DestinyFolder, $"*.{allowedFileExtension.Value}");
+            string[] files = Directory.GetFiles(DestinyFolder, $"*.{allowedFileExtension.Value}", SearchOption.AllDirectories);
             foreach (string file in files)
             {
+                StringBuilder sb = new(allowedFileExtension.CommentOpen);
+                sb.Append(DisclaimerText);
+                sb.Append(allowedFileExtension.CommentClose);
+                sb.Append(Environment.NewLine);
+                sb.Append(Environment.NewLine);
+
                 string content = await File.ReadAllTextAsync(file, Encoding.UTF8);
                 int n = sb.ToString().IndexOf(Environment.NewLine, StringComparison.Ordinal);
                 int contentFirstLineN = content.IndexOf(Environment.NewLine, StringComparison.Ordinal);

@@ -1,13 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>Dnj.Colab.Samples.MvvmSample.Abstractions</PackageId>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<Authors>Samuel Maícas</Authors>
+		<Company>smaicas</Company>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Dnj.Colab.Samples.MvvmSample.RCL\Dnj.Colab.Samples.MvvmSample.RCL.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Dnj.Colab.Samples.MvvmSample.RCL\Dnj.Colab.Samples.MvvmSample.RCL.csproj" />
+	</ItemGroup>
 
 </Project>

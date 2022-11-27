@@ -61,12 +61,11 @@ namespace Dnj.Colab.Samples.FileDisclaimer.ViewModels {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This content is copyright © Dnj.Colab repository authors, released under GPL3.0,
-        ///which gives you permission to use content for almost any purpose 
-        ///(but does not grant you any trademark permissions), 
-        ///so long as you note the license and give credit, 
-        ///such as you can find described in repository license file: 
-        ///https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE.
+        ///   Looks up a localized string similar to This file is copyright © 2022 Dnj.Colab repository authors.
+        ///
+        ///Dnj.Colab content is distributed as free software: you can redistribute it and/or modify it under the terms of the General Public License version 3 as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+        ///
+        ///Dnj.Colab content is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURP [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DisclaimerText {
             get {
