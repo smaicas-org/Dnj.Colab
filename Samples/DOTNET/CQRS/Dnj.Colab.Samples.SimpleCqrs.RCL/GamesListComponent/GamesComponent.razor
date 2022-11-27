@@ -1,0 +1,35 @@
+﻿@using Dnj.Colab.Samples.SimpleCqrs.RCL.ViewModels
+@using System.ComponentModel
+@namespace Dnj.Colab.Samples.SimpleCqrs.RCL
+@implements IDisposable
+@inherits ComponentBase
+
+@inject IGamesComponentVm GamesComponentVm
+<CascadingValue Value="GamesComponentVm" Name="ViewModel">
+    <GamesListComponent></GamesListComponent>
+</CascadingValue>
+@code {
+    public string clas = "bg-light";
+    protected override async Task OnInitializedAsync()
+    {
+        GamesComponentVm.PropertyChanged += OnPropertyChangedHandler;
+        GamesComponentVm.ErrorsChanged += OnErrorChangedHandler;
+        await base.OnInitializedAsync();
+    }
+
+    async void OnErrorChangedHandler(object? sender, DataErrorsChangedEventArgs e)
+    {
+        await InvokeAsync(StateHasChanged).ConfigureAwait(false);
+    }
+
+    async void OnPropertyChangedHandler(object? sender, PropertyChangedEventArgs e)
+    {
+        await InvokeAsync(StateHasChanged).ConfigureAwait(false);
+    }
+
+    public void Dispose()
+    {
+        GamesComponentVm.PropertyChanged -= OnPropertyChangedHandler;
+    }
+
+}

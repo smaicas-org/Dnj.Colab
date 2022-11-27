@@ -9,5 +9,5 @@ public class AppDbContext : DbContext
     {
 
     }
-    public DbSet<TodoItemEntity> TodoItems { get; set; }
+    public DbSet<GameEntity> Games { get; set; }
 }

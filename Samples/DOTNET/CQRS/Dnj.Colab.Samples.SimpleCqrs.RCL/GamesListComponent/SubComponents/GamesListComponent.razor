@@ -1,0 +1,105 @@
+﻿@using Dnj.Colab.Samples.SimpleCqrs.RCL.ViewModels
+@using Dnj.Colab.Samples.SimpleCqrs.RCL.Models
+@namespace Dnj.Colab.Samples.SimpleCqrs.RCL
+
+@inherits ComponentBase
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <label for="item-title" class="fw-bold">Título</label>
+            <input id="item-title" type="text" @bind="GamesComponentVm.CurrentGame.Title" class="form-control" />
+            @if (GamesComponentVm.HasErrors)
+            {
+                <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.Title))</div>
+            }
+            </div>
+        <div class="col-12">
+            <label for="item-genre" class="fw-bold">Género</label>
+            <input id="item-genre" type="text" @bind="GamesComponentVm.CurrentGame.Genre" class="form-control" />
+            @if (GamesComponentVm.HasErrors)
+            {
+                <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.Genre))</div>
+            }
+        </div>
+        <div class="col-12">
+            <label for="item-platform" class="fw-bold">Plataforma</label>
+            <input id="item-platform" type="text" @bind="GamesComponentVm.CurrentGame.Platform" class="form-control" />
+            @if (GamesComponentVm.HasErrors)
+            {
+                <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.Platform))</div>
+            }
+        </div>
+        <div class="col-12">
+            <label for="item-releasedate" class="fw-bold">Fecha de lanzamiento</label>
+            <input id="item-releasedate" type="date" @bind="GamesComponentVm.CurrentGame.ReleaseDate" class="form-control" />
+            @if (GamesComponentVm.HasErrors)
+            {
+                <div class="text-danger">@GamesComponentVm.GetErrorsDisplay(nameof(GamesComponentVm.CurrentGame.ReleaseDate))</div>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="button" value="Crear/Actualizar" class="btn-success" @onclick="async () => await CreateGame()"/>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Platform</th>
+                <th>Genre</th>
+                <th>ReleaseDate</th>
+                <th colspan="2"></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (GameDto dto in @GamesComponentVm.Games)
+            {
+                <tr>
+                    <td>@dto.Id</td>
+                    <td>@dto.Title</td>
+                    <td>@dto.Platform</td>
+                    <td>@dto.Genre</td>
+                    <td>@dto.ReleaseDate</td>
+                    <td><input type="button" class="btn-info" value="Edit" @onclick="async () => await EditGame(dto)"/></td>
+                    <td><input type="button" class="btn-danger" value="Delete" @onclick="async () => await DeleteGame(dto)"/></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+            
+    </div>
+</div>
+
+@code {
+
+    [CascadingParameter(Name = "ViewModel")]
+    public IGamesComponentVm GamesComponentVm { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GamesComponentVm.GetAllGames();
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    private async Task CreateGame()
+    {
+        await GamesComponentVm.CreateGame();
+    }
+
+    private async Task DeleteGame(GameDto dto)
+    {
+        await GamesComponentVm.DeleteGame(dto);
+    }
+
+    private async Task EditGame(GameDto dto)
+    {
+        await GamesComponentVm.EditGame(dto);
+    }
+
+}

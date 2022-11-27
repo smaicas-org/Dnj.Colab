@@ -1,5 +1,7 @@
 using Dnj.Colab.Samples.SimpleCqrs.Data;
 using Dnj.Colab.Samples.SimpleCqrs.Mediator;
+using Dnj.Colab.Samples.SimpleCqrs.RCL.ViewModels;
+using Dnj.Colab.Samples.SimpleCqrs.ViewModel;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +20,7 @@ builder.Services.AddMediatR(typeof(Program).Assembly);
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(DnjPipelineFluentValidationBehavior<,>));
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
-//builder.Services.AddScoped<IDnjTodoViewModel, CqrsSampleTodoViewModel>();
+builder.Services.AddScoped<IGamesComponentVm, GamesComponentVm>();
 
 WebApplication app = builder.Build();
 
@@ -38,5 +40,4 @@ app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
-
 app.Run();

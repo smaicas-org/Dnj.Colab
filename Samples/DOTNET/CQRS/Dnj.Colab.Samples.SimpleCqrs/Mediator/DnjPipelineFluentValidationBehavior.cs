@@ -30,7 +30,7 @@ public class DnjPipelineFluentValidationBehavior<TRequest, TResponse> : IPipelin
             .ToList();
 
         if (!validationFailures.Any()) return next();
-
+        throw new DnjPipelineValidationException(validationFailures);
         string error = string.Join("\r\n", validationFailures);
         throw new DnjPipelineValidationException(error);
     }

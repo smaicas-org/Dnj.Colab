@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Serialization;
+using FluentValidation.Results;
 
 namespace Dnj.Colab.Samples.SimpleCqrs.Mediator.Exceptions;
 
@@ -46,4 +47,7 @@ public class DnjPipelineValidationException : Exception
     protected DnjPipelineValidationException(SerializationInfo info, StreamingContext context) : base(info, context)
     {
     }
+
+    public List<ValidationFailure> ValidationFailures { get; } = new();
+    public DnjPipelineValidationException(List<ValidationFailure> validationFailures) => ValidationFailures = validationFailures;
 }
