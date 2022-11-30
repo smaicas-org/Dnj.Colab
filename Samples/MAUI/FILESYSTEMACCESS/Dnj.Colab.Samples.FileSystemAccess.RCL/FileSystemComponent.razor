@@ -1,0 +1,24 @@
+﻿@using Dnj.Colab.Samples.FileSystemAccess.Abstractions
+@inject IFileSystemAccessService FileSystemAccessService
+
+<div class="container">
+    <div class="row">
+        <InputFile OnChange="async (e) => await LoadFiles(e)" />
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        @Text1
+    </div>
+</div>
+
+@code
+{
+    private string Text1 { get; set; } = string.Empty;
+
+    private async Task LoadFiles(InputFileChangeEventArgs e)
+    {
+        Text1 = await FileSystemAccessService.ReadFileAsync(e.File);
+        StateHasChanged();
+    }
+}
