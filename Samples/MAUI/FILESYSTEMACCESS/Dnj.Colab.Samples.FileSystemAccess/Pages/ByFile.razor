@@ -1,0 +1,12 @@
+﻿@page "/byfile"
+@using Dnj.Colab.Samples.FileSystemAccess.Abstractions
+
+@inject IFileSystemAccessVm ViewModel
+
+<CascadingValue Name="ViewModel" Value="ViewModel">
+    <FileSystemComponent></FileSystemComponent>
+</CascadingValue>
+
+@code{
+
+}

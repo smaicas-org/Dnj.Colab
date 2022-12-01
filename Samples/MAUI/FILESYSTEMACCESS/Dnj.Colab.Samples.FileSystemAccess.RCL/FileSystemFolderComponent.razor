@@ -1,0 +1,32 @@
+﻿@using Dnj.Colab.Samples.FileSystemAccess.Abstractions
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <label for="projectSelector">@FileSystemAccessVm.SelectedFolder</label>
+            <input @onclick="async args => await OpenFolderPickerAndProcess()"
+                   id="folderSelector"
+                   type="button"
+                   class="btn btn-dark"
+                   value="Select Folder">
+        </div>
+    </div>
+    @foreach (KeyValuePair<string, string> f in @FileSystemAccessVm.InMemoryFiles)
+    {
+        <h2 class="row">Archivo en memoria: @f.Key</h2>
+        <div class="row">
+            @f.Value
+        </div>
+    }
+</div>
+
+@code {
+    [CascadingParameter(Name = "ViewModel")]
+    public IFileSystemAccessVm FileSystemAccessVm { get; set; }
+
+    private async Task OpenFolderPickerAndProcess()
+    {
+        await FileSystemAccessVm.OpenFolderPicker();
+        StateHasChanged();
+    }
+}

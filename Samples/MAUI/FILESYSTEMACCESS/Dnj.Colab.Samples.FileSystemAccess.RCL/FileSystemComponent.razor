@@ -1,24 +1,66 @@
 ﻿@using Dnj.Colab.Samples.FileSystemAccess.Abstractions
-@inject IFileSystemAccessService FileSystemAccessService
 
 <div class="container">
     <div class="row">
-        <InputFile OnChange="async (e) => await LoadFiles(e)" />
+        <InputFile OnChange="async (e) => await LoadFiles(e)" multiple />
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        @Text1
-    </div>
+    @foreach (KeyValuePair<string, string> f in @FileSystemAccessVm.InMemoryFiles)
+    {
+        <h2 class="row">Archivo en memoria: @f.Key</h2>
+        <div class="row">
+            @f.Value
+        </div>
+        <div class="row">
+            Memory used (Mb): @((double)FileSystemAccessVm.MemoryUsed[f.Key] / 1000 / 1000) Mb
+            Memory used (Kb): @((double)FileSystemAccessVm.MemoryUsed[f.Key] / 1000) Kb
+            Memory used (MiB): @((double)FileSystemAccessVm.MemoryUsed[f.Key] / 1024 / 1024) MiB
+            Memory used (KiB): @((double)FileSystemAccessVm.MemoryUsed[f.Key] / 1024) KiB
+        </div>
+
+    }
+    @foreach (KeyValuePair<string, string> f in FileSystemAccessVm.LocalFiles)
+    {
+        <h2 class="row">
+            Archivo en local: @f.Key
+        </h2>
+        <div class="row">
+            @(ReadCache(f))
+        </div>
+        <div class="row">
+            Tiempo: @FileSystemAccessVm.TimesLocalAccess[f.Key] ms
+        </div>
+    }
 </div>
 
 @code
 {
-    private string Text1 { get; set; } = string.Empty;
+    [CascadingParameter(Name = "ViewModel")]
+    public IFileSystemAccessVm FileSystemAccessVm { get; set; }
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        return base.OnAfterRenderAsync(firstRender);
+    }
+
+    private string Text { get; set; }
 
     private async Task LoadFiles(InputFileChangeEventArgs e)
     {
-        Text1 = await FileSystemAccessService.ReadFileAsync(e.File);
+        await FileSystemAccessVm.ReadMultipleFilesAsync(e.GetMultipleFiles());
         StateHasChanged();
+    }
+
+    private string ReadCache(KeyValuePair<string, string> f)
+    {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        var txt = FileSystemAccessVm.ReadFromLocalCache(f.Value);
+        watch.Stop();
+        if (!FileSystemAccessVm.TimesLocalAccess.ContainsKey(f.Key))
+        {
+            FileSystemAccessVm.TimesLocalAccess.Add(f.Key, watch.ElapsedMilliseconds);
+        }
+        return txt;
     }
 }

@@ -5,8 +5,9 @@ smaicas
 C#, HTML, CSS
 
 ## DESCRIPTION
-This is a sample that shows how to integrate File Disclaimer Component from Dnj.Colab.Samples.FileDisclaimer.RCL
-in a MAUI app as Sample to auto generate disclaimer text in specified files by file extension.
+This is a sample that shows how to access FileSystem in MAUI file to file and
+by folder. Also implements aproximation of time calculation in memory usage 
+and local filesystem access.
 
 ## LICENSE
 [GPL3](https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE)

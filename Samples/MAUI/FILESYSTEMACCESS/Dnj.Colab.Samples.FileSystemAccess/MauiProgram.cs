@@ -1,4 +1,5 @@
-﻿using Dnj.Colab.Samples.FileSystemAccess.Abstractions;
+﻿using Dnj.Colab.Samples.FileDisclaimer.Abstractions;
+using Dnj.Colab.Samples.FileSystemAccess.Abstractions;
 using Dnj.Colab.Samples.FileSystemAccess.Services;
 using Microsoft.Extensions.Logging;
 
@@ -19,7 +20,11 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
-        builder.Services.AddSingleton<IFileSystemAccessService, FileSystemAccessService>();
+#if WINDOWS
+        builder.Services.AddTransient<IFolderPicker, Platforms.Windows.DnjFolderPicker>();
+#endif
+
+        builder.Services.AddTransient<IFileSystemAccessVm, FileSystemAccessVm>();
 
         return builder.Build();
     }
