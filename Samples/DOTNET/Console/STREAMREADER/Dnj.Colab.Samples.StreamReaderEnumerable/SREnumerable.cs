@@ -7,7 +7,7 @@ public static class SREnumerable
     {
         // Check the memory before the iterator is used.
         long memoryBefore = GC.GetTotalMemory(true);
-        IEnumerable<String> stringsFound;
+        IEnumerable<string> stringsFound;
         // Open a file with the StreamReaderEnumerable and check for a string.
         try
         {
@@ -50,14 +50,14 @@ public static class SREnumerable
             fileContents.Add(sr.ReadLine());
         }
 
-        // Check for the string.
+        //Check for the string.
         IEnumerable<string> stringsFound =
             from line in fileContents
             where line.Contains("\"")
             select line;
 
         sr.Close();
-        //Console.WriteLine("Found: " + stringsFound.Count());
+        Console.WriteLine("Found: " + stringsFound.Count());
 
         // Check the memory after when the iterator is not used, and output it to the console.
         long memoryAfter = GC.GetTotalMemory(false);
