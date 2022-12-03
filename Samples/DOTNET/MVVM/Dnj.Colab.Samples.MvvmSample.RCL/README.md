@@ -2,8 +2,11 @@
 smaicas
 
 ## Languages
-C#
+C#, HTML, CSS
 
 ## DESCRIPTION
-Testing memory usage StreamReader vs EnumerableStreamReader implemented class.
-See: https://learn.microsoft.com/es-es/dotnet/api/system.collections.generic.ienumerable-1?view=net-7.0
+This is a sample that shows how to integrate Todo Component from Dnj.Colab.Samples.MvvmSample.RCL
+as sample to implement MVVM pattern.
+
+## LICENSE
+[GPL3](https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE)
