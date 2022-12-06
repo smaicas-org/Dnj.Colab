@@ -52,29 +52,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level2", "Level2", "{B11925
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level3", "Level3", "{26096D16-510C-4E06-B283-78B75BD7C82C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.Markov", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.Markov\Dnj.Colab.Samples.Markov.csproj", "{C3173679-45A6-4F42-9B3A-03656CE22A01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.Markov", "Samples\DOTNET\Blazor\MARKOV\Dnj.Colab.Samples.Markov\Dnj.Colab.Samples.Markov.csproj", "{C3173679-45A6-4F42-9B3A-03656CE22A01}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MARKOV", "MARKOV", "{F859E3A9-29AD-4261-B193-880BAF913251}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.Markov.Test", "Samples\DOTNET\MARKOV\Dnj.Colab.Samples.Markov.Test\Dnj.Colab.Samples.Markov.Test.csproj", "{35FED9A9-C3C7-4F85-937B-4899E3733D35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.Markov.Test", "Samples\DOTNET\Blazor\MARKOV\Dnj.Colab.Samples.Markov.Test\Dnj.Colab.Samples.Markov.Test.csproj", "{35FED9A9-C3C7-4F85-937B-4899E3733D35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JSINTEROP", "JSINTEROP", "{A3C22753-DCF5-4106-AE92-94F4470960F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleJSInterop", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.SimpleJSInterop\Dnj.Colab.Samples.SimpleJSInterop.csproj", "{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleJSInterop", "Samples\DOTNET\Blazor\JSINTEROP\Dnj.Colab.Samples.SimpleJSInterop\Dnj.Colab.Samples.SimpleJSInterop.csproj", "{46A16602-8532-4ECE-BDDE-7E7A9F4DBC58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleJSInterop.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.SimpleJSInterop.RCL\Dnj.Colab.Samples.SimpleJSInterop.RCL.csproj", "{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleJSInterop.RCL", "Samples\DOTNET\Blazor\JSINTEROP\Dnj.Colab.Samples.SimpleJSInterop.RCL\Dnj.Colab.Samples.SimpleJSInterop.RCL.csproj", "{6DF19E89-D16B-4A99-A254-94E0CB4E61BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.JSInteropTS.RCL", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.JSInteropTS.RCL\Dnj.Colab.Samples.JSInteropTS.RCL.csproj", "{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.JSInteropTS.RCL", "Samples\DOTNET\Blazor\JSINTEROP\Dnj.Colab.Samples.JSInteropTS.RCL\Dnj.Colab.Samples.JSInteropTS.RCL.csproj", "{5F7A7C9C-ABF3-4A17-90AB-FB53D24FF4AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.JSInteropTS", "Samples\DOTNET\JSINTEROP\Dnj.Colab.Samples.JSInteropTS\Dnj.Colab.Samples.JSInteropTS.csproj", "{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.JSInteropTS", "Samples\DOTNET\Blazor\JSINTEROP\Dnj.Colab.Samples.JSInteropTS\Dnj.Colab.Samples.JSInteropTS.csproj", "{E4722AA1-51D2-4FD9-8E8F-FBFED4CCDDD7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CQRS", "CQRS", "{6E475CE2-9E61-411A-B5AC-2E2E9B33124B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleCqrs", "Samples\DOTNET\CQRS\Dnj.Colab.Samples.SimpleCqrs\Dnj.Colab.Samples.SimpleCqrs.csproj", "{9F3D3053-6340-4B15-939A-A68A460D7052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleCqrs", "Samples\DOTNET\Blazor\CQRS\Dnj.Colab.Samples.SimpleCqrs\Dnj.Colab.Samples.SimpleCqrs.csproj", "{9F3D3053-6340-4B15-939A-A68A460D7052}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample.RCL", "Samples\DOTNET\MVVM\Dnj.Colab.Samples.MvvmSample.RCL\Dnj.Colab.Samples.MvvmSample.RCL.csproj", "{566D10FF-273F-42A8-B751-FE06EBC13128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample.RCL", "Samples\DOTNET\Blazor\MVVM\Dnj.Colab.Samples.MvvmSample.RCL\Dnj.Colab.Samples.MvvmSample.RCL.csproj", "{566D10FF-273F-42A8-B751-FE06EBC13128}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample", "Samples\DOTNET\MVVM\Dnj.Colab.Samples.MvvmSample\Dnj.Colab.Samples.MvvmSample.csproj", "{56772F25-BDC7-4CF8-A81D-6CF1391235D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample", "Samples\DOTNET\Blazor\MVVM\Dnj.Colab.Samples.MvvmSample\Dnj.Colab.Samples.MvvmSample.csproj", "{56772F25-BDC7-4CF8-A81D-6CF1391235D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{134A8AEB-52AD-4973-9635-522ACB154C89}"
 EndProject
@@ -82,11 +82,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Maui", "Maui", "{DDDA64EC-0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FILEDISCLAIMER", "FILEDISCLAIMER", "{DA402295-88CA-4788-AB7C-7C639FB037E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.FileDisclaimer", "Projects\MAUI\Dnj.Colab.Samples.FileDisclaimer\Dnj.Colab.Samples.FileDisclaimer.csproj", "{6C1BE16E-EBF8-4153-8067-EE53BAE7A3DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.FileDisclaimer", "Projects\MAUI\FILEDISCLAIMER\Dnj.Colab.Samples.FileDisclaimer\Dnj.Colab.Samples.FileDisclaimer.csproj", "{6C1BE16E-EBF8-4153-8067-EE53BAE7A3DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.FileDisclaimer.RCL", "Projects\MAUI\Dnj.Colab.Samples.FileDisclaimer.RCL\Dnj.Colab.Samples.FileDisclaimer.RCL.csproj", "{368DD04A-4A97-420C-8B2B-D7C67235B313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.FileDisclaimer.RCL", "Projects\MAUI\FILEDISCLAIMER\Dnj.Colab.Samples.FileDisclaimer.RCL\Dnj.Colab.Samples.FileDisclaimer.RCL.csproj", "{368DD04A-4A97-420C-8B2B-D7C67235B313}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample.Abstractions", "Samples\DOTNET\MVVM\Dnj.Colab.Samples.MvvmSample.Abstractions\Dnj.Colab.Samples.MvvmSample.Abstractions.csproj", "{64A78898-7CBD-44E5-856B-C31E9FECEF9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.MvvmSample.Abstractions", "Samples\DOTNET\Blazor\MVVM\Dnj.Colab.Samples.MvvmSample.Abstractions\Dnj.Colab.Samples.MvvmSample.Abstractions.csproj", "{64A78898-7CBD-44E5-856B-C31E9FECEF9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Codewars", "Codewars", "{85593657-C078-4F17-805C-551AC5885714}"
 EndProject
@@ -94,7 +94,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kyu3", "Kyu3", "{D93E0B17-5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleshipFieldValidator", "Training\CODEWARS\Kyu3\BattleshipFieldValidator\BattleshipFieldValidator.csproj", "{A44678DB-E8DA-4E8E-9715-FE5D0D44957D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleCqrs.RCL", "Samples\DOTNET\CQRS\Dnj.Colab.Samples.SimpleCqrs.RCL\Dnj.Colab.Samples.SimpleCqrs.RCL.csproj", "{1319E95B-D932-4A4E-B6A5-38DD1ECE8659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SimpleCqrs.RCL", "Samples\DOTNET\Blazor\CQRS\Dnj.Colab.Samples.SimpleCqrs.RCL\Dnj.Colab.Samples.SimpleCqrs.RCL.csproj", "{1319E95B-D932-4A4E-B6A5-38DD1ECE8659}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.FileSystemAccess.RCL", "Samples\MAUI\FILESYSTEMACCESS\Dnj.Colab.Samples.FileSystemAccess.RCL\Dnj.Colab.Samples.FileSystemAccess.RCL.csproj", "{C8E1F05B-275E-496C-B323-A87FE65B4883}"
 EndProject
@@ -106,11 +106,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STREAMREADER", "STREAMREADE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FILESYSTEMACCESS", "FILESYSTEMACCESS", "{C5BADACE-783C-4800-9F6C-08F129B9663F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.StreamReaderEnumerable", "Samples\DOTNET\Console\STREAMREADER\Dnj.Colab.Samples.StreamReaderEnumerable\Dnj.Colab.Samples.StreamReaderEnumerable.csproj", "{370F262A-359C-419C-A517-4BB8B94EF880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.StreamReaderEnumerable", "Samples\DOTNET\Console\Benchmarks\STREAMREADER\Dnj.Colab.Samples.StreamReaderEnumerable\Dnj.Colab.Samples.StreamReaderEnumerable.csproj", "{370F262A-359C-419C-A517-4BB8B94EF880}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SORTING", "SORTING", "{A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.SortingAlgorithms", "Samples\DOTNET\Console\SORTING\Dnj.Colab.Samples.SortingAlgorithms\Dnj.Colab.Samples.SortingAlgorithms.csproj", "{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.SortingAlgorithms", "Samples\DOTNET\Console\Benchmarks\SORTING\Dnj.Colab.Samples.SortingAlgorithms\Dnj.Colab.Samples.SortingAlgorithms.csproj", "{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmarks", "Benchmarks", "{5071AE9D-111D-4F6D-9A32-3748A77154B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -240,11 +242,12 @@ Global
 		{C8E1F05B-275E-496C-B323-A87FE65B4883} = {C5BADACE-783C-4800-9F6C-08F129B9663F}
 		{ADA9383B-2254-4987-B5E5-92B0995FC311} = {C5BADACE-783C-4800-9F6C-08F129B9663F}
 		{7F4A26AE-0051-42BE-8CF1-896193E06DBD} = {C5BADACE-783C-4800-9F6C-08F129B9663F}
-		{E7A6D09D-DDAC-48EA-AA9E-519B03193414} = {D405CEAE-CFA0-45A5-B688-A84A68B042C1}
+		{E7A6D09D-DDAC-48EA-AA9E-519B03193414} = {5071AE9D-111D-4F6D-9A32-3748A77154B3}
 		{C5BADACE-783C-4800-9F6C-08F129B9663F} = {1B2DA651-42AF-445D-B7EA-812D93FCC239}
 		{370F262A-359C-419C-A517-4BB8B94EF880} = {E7A6D09D-DDAC-48EA-AA9E-519B03193414}
-		{A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2} = {D405CEAE-CFA0-45A5-B688-A84A68B042C1}
+		{A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2} = {5071AE9D-111D-4F6D-9A32-3748A77154B3}
 		{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D} = {A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2}
+		{5071AE9D-111D-4F6D-9A32-3748A77154B3} = {D405CEAE-CFA0-45A5-B688-A84A68B042C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C506D04A-CFD5-4922-B91B-4BE35FA817F7}
