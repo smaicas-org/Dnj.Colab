@@ -5,8 +5,6 @@ public static class SREnumerable
 {
     public static void TestStreamReaderEnumerable(string filepath)
     {
-        // Check the memory before the iterator is used.
-        long memoryBefore = GC.GetTotalMemory(true);
         IEnumerable<string> stringsFound;
         // Open a file with the StreamReaderEnumerable and check for a string.
         try
@@ -15,23 +13,17 @@ public static class SREnumerable
                   from line in new StreamReaderEnumerable(filepath)
                   where line.Contains("\"")
                   select line;
-            Console.WriteLine("Found: " + stringsFound.Count());
+            //Console.WriteLine("Found: " + stringsFound.Count());
         }
         catch (FileNotFoundException)
         {
             Console.WriteLine(@$"This example requires a file named {filepath}");
             return;
         }
-
-        // Check the memory after the iterator and output it to the console.
-        long memoryAfter = GC.GetTotalMemory(false);
-        Console.WriteLine("Memory Used With Iterator = \t"
-            + string.Format(((memoryAfter - memoryBefore) / 1000).ToString(), "n") + "kb");
     }
 
     public static void TestReadingFile(string filepath)
     {
-        long memoryBefore = GC.GetTotalMemory(true);
         StreamReader sr;
         try
         {
@@ -57,12 +49,7 @@ public static class SREnumerable
             select line;
 
         sr.Close();
-        Console.WriteLine("Found: " + stringsFound.Count());
-
-        // Check the memory after when the iterator is not used, and output it to the console.
-        long memoryAfter = GC.GetTotalMemory(false);
-        Console.WriteLine("Memory Used Without Iterator = \t" +
-            string.Format(((memoryAfter - memoryBefore) / 1000).ToString(), "n") + "kb");
+        //Console.WriteLine("Found: " + stringsFound.Count());
     }
 }
 
