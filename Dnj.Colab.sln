@@ -103,13 +103,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.FileSystemAccess.Abstractions", "Samples\MAUI\FILESYSTEMACCESS\Dnj.Colab.Samples.FileSystemAccess.Abstractions\Dnj.Colab.Samples.FileSystemAccess.Abstractions.csproj", "{7F4A26AE-0051-42BE-8CF1-896193E06DBD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STREAMREADER", "STREAMREADER", "{E7A6D09D-DDAC-48EA-AA9E-519B03193414}"
-	ProjectSection(SolutionItems) = preProject
-		Samples\DOTNET\MVVM\Dnj.Colab.Samples.MvvmSample.RCL\README.md = Samples\DOTNET\MVVM\Dnj.Colab.Samples.MvvmSample.RCL\README.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FILESYSTEMACCESS", "FILESYSTEMACCESS", "{C5BADACE-783C-4800-9F6C-08F129B9663F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.StreamReaderEnumerable", "Samples\DOTNET\Console\STREAMREADER\Dnj.Colab.Samples.StreamReaderEnumerable\Dnj.Colab.Samples.StreamReaderEnumerable.csproj", "{370F262A-359C-419C-A517-4BB8B94EF880}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SORTING", "SORTING", "{A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.SortingAlgorithms", "Samples\DOTNET\Console\SORTING\Dnj.Colab.Samples.SortingAlgorithms\Dnj.Colab.Samples.SortingAlgorithms.csproj", "{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +194,10 @@ Global
 		{370F262A-359C-419C-A517-4BB8B94EF880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{370F262A-359C-419C-A517-4BB8B94EF880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{370F262A-359C-419C-A517-4BB8B94EF880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -238,6 +243,8 @@ Global
 		{E7A6D09D-DDAC-48EA-AA9E-519B03193414} = {D405CEAE-CFA0-45A5-B688-A84A68B042C1}
 		{C5BADACE-783C-4800-9F6C-08F129B9663F} = {1B2DA651-42AF-445D-B7EA-812D93FCC239}
 		{370F262A-359C-419C-A517-4BB8B94EF880} = {E7A6D09D-DDAC-48EA-AA9E-519B03193414}
+		{A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2} = {D405CEAE-CFA0-45A5-B688-A84A68B042C1}
+		{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D} = {A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C506D04A-CFD5-4922-B91B-4BE35FA817F7}

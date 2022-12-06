@@ -66,4 +66,3 @@ stopwatch.Start();
 SREnumerable.TestReadingFile($"{Directory.GetCurrentDirectory()}/sample100k.csv");
 stopwatch.Stop();
 Console.WriteLine($"{stopwatch.ElapsedMilliseconds} ms");
-
