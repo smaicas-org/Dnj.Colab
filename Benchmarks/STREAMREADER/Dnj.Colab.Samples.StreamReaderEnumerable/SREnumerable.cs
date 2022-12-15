@@ -21,7 +21,6 @@ public static class SREnumerable
             return;
         }
     }
-
     public static void TestReadingFile(string filepath)
     {
         StreamReader sr;
@@ -50,6 +49,35 @@ public static class SREnumerable
 
         sr.Close();
         //Console.WriteLine("Found: " + stringsFound.Count());
+    }
+
+    public static void TestYieldReadingFile(string filepath)
+    {
+        IEnumerable<string> stringsFound;
+        // Open a file with the StreamReaderEnumerable and check for a string.
+        try
+        {
+            stringsFound =
+                from line in YieldReadFileLines(filepath)
+                where line.Contains("\"")
+                select line;
+            //Console.WriteLine("Found: " + stringsFound.Count());
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine(@$"This example requires a file named {filepath}");
+            return;
+        }
+    }
+
+    private static IEnumerable<string> YieldReadFileLines(string filePath)
+    {
+        using StreamReader reader = new(filePath);
+        string line;
+        while ((line = reader.ReadLine()) != null)
+        {
+            yield return line;
+        }
     }
 }
 

@@ -1,7 +1,11 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Order;
 
 namespace Dnj.Colab.Samples.SortingAlgorithms;
 
+[RankColumn]
+[Orderer(SummaryOrderPolicy.FastestToSlowest)]
+[MemoryDiagnoser]
 public class SortingBenchmark
 {
     readonly int[] _orderedArray = new int[10000];
