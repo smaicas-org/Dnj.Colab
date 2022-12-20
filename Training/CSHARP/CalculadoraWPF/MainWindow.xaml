@@ -1,0 +1,308 @@
+﻿<Window x:Class="Canvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Canvas"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="450" Width="350"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        MouseDown="Window_MouseDown">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/TextBlockStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border CornerRadius="25" BorderThickness="5" Background="DarkSlateGray" BorderBrush="DarkGray">
+
+        <Grid>
+
+            <!--Separacion entre botones de 10, margen 20-->
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="20"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="20"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <Border CornerRadius="15" 
+                    Background="WhiteSmoke"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="7">
+
+                <TextBlock x:Name="txtCalculo"
+                       Style="{StaticResource txtBlockStyle}"
+                       Background="Transparent"
+                       FontSize="30"
+                       TextAlignment="Center">
+                </TextBlock>
+
+            </Border>
+
+            <!--Etiqueta Titulo-->
+            <Border Background="Gray"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Height="50"
+                    CornerRadius="25"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+
+                <Label Content="Calculadora"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+
+            </Border>
+
+            <StackPanel Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="3" Grid.RowSpan="2" Orientation="Horizontal">
+               
+                <!--Boton Minimizar-->
+                <Button x:Name="btnMinimize"
+                    Style="{StaticResource minimizeButtonStyle}"
+                    Template="{StaticResource minimizeButtonTemplate}" 
+                    Margin="72,0,10,0"
+                    Click="btnMinimize_Click"/>
+
+                <!--Boton Salir-->
+                <Button x:Name="btnExit"
+                    
+                    Style="{StaticResource exitButtonStyle}"
+                    Template="{StaticResource exitButtonTemplate}" Click="btnExit_Click" Width="34"/>
+                
+            </StackPanel>
+
+
+            <!--Dimensiones boton: 56,25 x 82,5-->
+            <Button x:Name="btnCE"
+                    Content="CE"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="5" 
+                    Grid.Column="1" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnC"
+                    Content="C"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="5" 
+                    Grid.Column="3" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnSupr"
+                    Content="Supr"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="5" 
+                    Grid.Column="5" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnDiv"
+                    Content="/"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="5" 
+                    Grid.Column="7" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn7"
+                    Content="7"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="7" 
+                    Grid.Column="1" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn8"
+                    Content="8"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="7" 
+                    Grid.Column="3" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn9"
+                    Content="9"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="7" 
+                    Grid.Column="5" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnMult"
+                    Content="x"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="7" 
+                    Grid.Column="7" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn4"
+                    Content="4"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="9" 
+                    Grid.Column="1" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn5"
+                    Content="5"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="9" 
+                    Grid.Column="3" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn6"
+                    Content="6"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="9" 
+                    Grid.Column="5" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnRes"
+                    Content="-"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="9" 
+                    Grid.Column="7" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn1"
+                    Content="1"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="11" 
+                    Grid.Column="1" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn2"
+                    Content="2"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="11" 
+                    Grid.Column="3" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn3"
+                    Content="3"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="11" 
+                    Grid.Column="5" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnSum"
+                    Content="+"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="11"
+                    Grid.RowSpan="3"
+                    Grid.Column="7" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btn0"
+                    Content="0"
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="13" 
+                    Grid.Column="1" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnDec"
+                    Content="."
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="13" 
+                    Grid.Column="3" 
+                    Click="btnCE_Click">
+
+            </Button>
+
+            <Button x:Name="btnResultado"
+                    Content="="
+                    Style="{StaticResource calcButtonStyle}"
+                    Template="{StaticResource calcButtonTemplate}"
+                    Grid.Row="13" 
+                    Grid.Column="5" 
+                    Click="btnResultado_Click">
+
+            </Button>
+
+        </Grid>
+
+    </Border>
+</Window>
