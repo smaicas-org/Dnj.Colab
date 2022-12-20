@@ -116,7 +116,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmarks", "Benchmarks", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{6E558B7A-AC7D-4A46-B282-8745B4A713C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnj.Colab.Samples.CustomersRestFul", "Samples\DOTNET\AspNet\Dnj.Colab.Samples.CustomersRestFul\Dnj.Colab.Samples.CustomersRestFul.csproj", "{604393D3-81E2-40C4-86BF-5054A9F7144B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnj.Colab.Samples.CustomersRestFul", "Samples\DOTNET\AspNet\Dnj.Colab.Samples.CustomersRestFul\Dnj.Colab.Samples.CustomersRestFul.csproj", "{604393D3-81E2-40C4-86BF-5054A9F7144B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraWPF", "..\2\DaniDI22\CanvasWPF\Canvas\CalculadoraWPF.csproj", "{D2895BC4-21B2-4DA1-B2AE-4A5A88C4C9C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CalculadoraWPF.NET6.0", "CalculadoraWPF.NET6.0", "{96D1732D-374A-4EB9-8C3B-5BE44062AF14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -208,6 +212,10 @@ Global
 		{604393D3-81E2-40C4-86BF-5054A9F7144B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{604393D3-81E2-40C4-86BF-5054A9F7144B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{604393D3-81E2-40C4-86BF-5054A9F7144B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2895BC4-21B2-4DA1-B2AE-4A5A88C4C9C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2895BC4-21B2-4DA1-B2AE-4A5A88C4C9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2895BC4-21B2-4DA1-B2AE-4A5A88C4C9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2895BC4-21B2-4DA1-B2AE-4A5A88C4C9C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -257,6 +265,8 @@ Global
 		{2A199B73-55D9-4FE4-BBCC-FF0A1535E91D} = {A3C68CEC-6D8F-4F41-AF80-F404BB92B7D2}
 		{6E558B7A-AC7D-4A46-B282-8745B4A713C0} = {2E0F193F-2567-4BE1-BC88-A89DA03DB239}
 		{604393D3-81E2-40C4-86BF-5054A9F7144B} = {6E558B7A-AC7D-4A46-B282-8745B4A713C0}
+		{D2895BC4-21B2-4DA1-B2AE-4A5A88C4C9C4} = {96D1732D-374A-4EB9-8C3B-5BE44062AF14}
+		{96D1732D-374A-4EB9-8C3B-5BE44062AF14} = {FBE83585-3BF3-4CEE-AC84-FD6FF1216874}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C506D04A-CFD5-4922-B91B-4BE35FA817F7}
