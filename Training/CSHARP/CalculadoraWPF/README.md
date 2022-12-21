@@ -1,11 +1,11 @@
 ﻿## Author:
-smaicas
+[DaniDevSDBK](https://github.com/DaniDevSDBK)
 
 ## Languages
 C#
 
 ## DESCRIPTION
-https://www.codewars.com/kata/52bb6539a4cf1b12d90005b7
+Simple Calculator WPF
 
 ## LICENSE
 [GPL3](https://github.com/smaicas-org/Dnj.Colab/blob/dev/LICENSE)
